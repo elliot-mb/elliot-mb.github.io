@@ -1,0 +1,47 @@
+#readme{
+  color: rgb(128, 128, 128);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0rem 0 0rem 0;
+  font-size: 1em;
+}
+
+#readme:hover{
+  color: rgb(198, 236, 255);
+}
+
+.markdown-box{
+  background-color:#333;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5em;
+}
+
+.markdown-box h1{
+  padding: 0 0 0 0;
+  
+}
+
+.markdown-box a {
+  text-decoration: underline;
+} 
+
+#shown-false{
+  width:fit-content;
+  height:fit-content;
+}
+
+#shown-true{
+  padding-bottom: 0.5em;
+}
+
+#git-project{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+img{
+  max-width: min(calc(536px), calc((100vw - 11.5rem) / 2));
+}
+
