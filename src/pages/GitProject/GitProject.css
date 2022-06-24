@@ -1,5 +1,5 @@
 #readme{
-  color: rgb(128, 128, 128);
+  color: #bcf;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -37,8 +37,16 @@
 
 #git-project{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2em;
+}
+
+@media screen and (min-width: 950px) {
+  #git-project{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
 }
 
 img{

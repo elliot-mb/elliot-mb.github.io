@@ -5,22 +5,10 @@ import {
   Link
 } from "react-router-dom";
 
-import {gitProjects} from "../../data/projects.js"
+import {LinkList, Test} from "../../components/List.js";
+import {gitProjects, otherProjects} from "../../data/projects.js";
 
 export function Projects() {
-
-  function LinkList(root, lis) {
-    let elements = [];
-    lis.forEach((li, i) => {
-      elements.push(
-        <li key={i}>
-        <Link to={`${root}/${li.name}`}>{li.name}</Link>
-        </li>
-      );
-    });
-  
-    return elements;
-  }
 
   useEffect(() => {
     document.title = "Projects | Elliot Buckingham";
@@ -31,10 +19,9 @@ export function Projects() {
       <h2>Projects</h2>
       <nav>
         <h3>GitHub</h3>
-        <ul>
-          {LinkList("/projects", gitProjects)}
-        </ul>
+        <LinkList root="/projects" lis={gitProjects} />
         <h3>Other</h3>
+        <LinkList root="/projects" lis={otherProjects} />
       </nav>
     </div>
   )

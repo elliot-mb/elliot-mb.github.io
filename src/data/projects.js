@@ -30,3 +30,9 @@ export const gitProjects = [
     content:[]
   }
 ];
+
+export const otherProjects = [
+  {
+    name:"Example other-project"
+  }
+];

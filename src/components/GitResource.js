@@ -2,6 +2,8 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 
+
+// pasta talking to the github api
 export class GitResource extends React.Component {
   constructor(props){
     super(props);

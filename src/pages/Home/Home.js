@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
-import "./Home.css"
+import "./Home.css";
+import { IconButton } from '../../components/Button.js';
+import GithubIcon from "./images/github.svg";
+import EmailIcon from "./images/email.svg";
+import LinkedInIcon from "./images/linkedin.svg";
 
 export function Home() {
 
@@ -17,8 +21,10 @@ export function Home() {
         <div> {/*column 1*/}
           <p>Nice to meet you, I'm Elliot, a second-year BSc Computer Science Student at the University of Bristol. Aspiring FE/BE/full-stack developer who enjoys both the web and making software.</p>
         </div>
-        <div> {/*column 2*/}
-          <p>Need to get in touch? Here are some useful links...</p>
+        <div className="contacts"> {/*column 2*/}
+          <IconButton icon={GithubIcon} url="/" target="_blank" alt="Github" text="Github" />
+          <IconButton icon={EmailIcon} url="/" target="_blank" alt="Email" text="Email" />
+          <IconButton icon={LinkedInIcon} url="/" target="_blank" alt="LinkedIn" text="LinkedIn" />
         </div>
       </div>
  
