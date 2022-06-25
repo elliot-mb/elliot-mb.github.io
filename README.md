@@ -1,5 +1,6 @@
 # [domain] 
-`[image of front page]`
+`[image of front page]`\
+Work-in-progress, will be hosted soon. 
 
 ## Available Scripts
 
