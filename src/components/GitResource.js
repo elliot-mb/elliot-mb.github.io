@@ -9,6 +9,8 @@ export class GitResource extends React.Component {
     super(props);
     this.state = {
       loaded: "no", // options: yes, no, error
+      errmsg: null,
+      code: null,
       item: null
     }
     this.result = "";
@@ -29,39 +31,33 @@ export class GitResource extends React.Component {
     console.log(`GET ${call}`);
     let self = this;
     fetch(call).then(r => {
+      //this.setState(c));
       if(!r.ok) {
         const e = `Attempting to load ${url}, got status ${r.status}.`;
         console.error(e);
         this.setState({loaded: "error", errmsg: e}); 
+        return "error";
+      }else{
+        return r.body.getReader();
       }
-
-        return r;
     }
-    ).then(
-      (r) => {
-        if(this.state.loaded !== "error"){
-          return r.body.getReader();
-        }
-      }, 
-      (error) => {
-        this.setState({loaded: "error", errmsg: `Attempting to load ${url}, got error ${error}`});
-      }
-      //processText cant be anonymous because it is recursive
     ).then(reader => { 
-        reader.read().then(function processText({done, value}) {
-          if(done){
-            //this.setState({loaded: "yes", item: value});
-            //self.result += ",101";
-            const str = new TextDecoder("utf-8").decode(Uint8Array.from(self.result.split(/,/)));
-            console.log(str);
-            //console.log((Array.of(chars))[0].split(/,/).reduce((x, y) => `${x} ${y}`, ""));
-            self.setState({loaded: "yes", item: str});
-            return;
-          }
-          const chunk = value; 
-          self.result += chunk;
-          return reader.read().then(processText);
-        })
+        if(reader !== "error"){
+          reader.read().then(function processText({done, value}) {
+            if(done){
+              //this.setState({loaded: "yes", item: value});
+              //self.result += ",101";
+              const str = new TextDecoder("utf-8").decode(Uint8Array.from(self.result.split(/,/)));
+              //console.log(str);
+              //console.log((Array.of(chars))[0].split(/,/).reduce((x, y) => `${x} ${y}`, ""));
+              self.setState({loaded: "yes", item: str});
+              return;
+            }
+            const chunk = value; 
+            self.result += chunk;
+            return reader.read().then(processText);
+          })
+        }else{ return; }
       }
     );
   }
@@ -84,6 +80,7 @@ export class GitResource extends React.Component {
             <div>
               <h2>An error occured</h2>
               <p>{this.state.errmsg}</p>
+              <p>This repository may be private.</p>
             </div>
           )
         default:

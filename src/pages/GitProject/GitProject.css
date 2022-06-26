@@ -50,6 +50,6 @@
 }
 
 img{
-  max-width: min(calc(536px), calc((100vw - 11.5rem) / 2));
+  max-width: min(calc(536px), calc((100vw - 12rem) / 2));
 }
 
