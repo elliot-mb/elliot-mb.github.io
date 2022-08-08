@@ -7,6 +7,7 @@ import {
   Navigate
 } from "react-router-dom";
 
+import {ParagraphList} from "../../components/List/List.js";
 import {useParams} from "react-router-dom";
 import {gitProjects} from "../../data/projects.js"
 import {GitResource} from "../../components/GitResource/GitResource.js";
@@ -35,7 +36,8 @@ export function GitProject() {
       <h1>{projectClass}</h1>
       <div id="git-project">
         <div> {/* column 1*/}
-          <p>{project.tagline}</p>
+          <h3>{project.tagline}</h3>
+          <ParagraphList xs={project.content}/>
         </div>
         <div className={`shown-${readmeShown}`} id="markdown-box">
           <button id="readme" onClick={() => setShown(!readmeShown)}>README.md</button>

@@ -34,7 +34,7 @@ li{
 #hero{
   background-color: #333;
   display: grid;
-  grid-template-columns: 12rem 1fr 1fr;
+  grid-template-columns: 12rem 1fr 2fr 2fr;
   gap: 3rem;
 }
 
@@ -61,4 +61,24 @@ li{
   margin: 0 auto;
   max-width: 1200px;
   padding: 0.5rem 2rem 2rem 2rem;
+}
+
+h3 {
+  margin-top:0;
+}
+
+@media screen and (max-width: 566px) { 
+
+  #hero{
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+
+  #hero{
+    display:block;
+    padding: 0.001rem;
+  }
 }

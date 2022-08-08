@@ -24,17 +24,17 @@ function App() {
           <div id="hero">
             <h1>ElliotMB</h1>
             <nav>
-            <ul className="nav-bar">
-              <li className="nav-link">
-                <Link to="/">Home</Link>
-              </li>
-              <li className="nav-link">
-                <Link to="/projects">Projects</Link>
-              </li>
-              <li className="nav-link">
-                <Link to="/experience">Experience</Link>
-              </li>
-            </ul>
+              <ul className="nav-bar">
+                <li className="nav-link">
+                  <Link to="/">Home</Link>
+                </li>
+                <li className="nav-link">
+                  <Link to="/projects">Projects</Link>
+                </li>
+                <li className="nav-link">
+                  <Link to="/experience">Experience</Link>
+                </li>
+              </ul>
             </nav>
           </div>
 

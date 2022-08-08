@@ -37,4 +37,22 @@ export function LinkList ({root, lis}) {
   );
 }
 
+export function ParagraphList ({xs}) {
+  let elements = [];
+  xs.forEach((x, i) => {
+    let blocks = [];
+    {x.split("<br>").forEach((block, j) => {
+        blocks.push(<span key={j}>{block}</span>); 
+        blocks.push(<br key={j + blocks.length + 1}/>); //adds newlines, avoids key collisions 
+    })}
+    elements.push(<p key={i}>
+      {blocks}
+    </p>);
+  });
+  return (
+    <>
+      {elements}
+    </>
+  );
+}
 //export const Test = () => <p>test</p>
