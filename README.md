@@ -1,5 +1,5 @@
 # [Portfolio website](https://elliot-mb.github.io/) 
-`[image of front page]`\
+`[image of front page]`
 
 ## Available Scripts
 
