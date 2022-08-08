@@ -1,6 +1,5 @@
-# [domain] 
+# [Portfolio website](https://elliot-mb.github.io/) 
 `[image of front page]`\
-Work-in-progress, will be hosted soon. 
 
 ## Available Scripts
 
