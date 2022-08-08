@@ -1,5 +1,5 @@
 #readme{
-  color: #bcf;
+  color: #cad;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -11,27 +11,31 @@
   color: rgb(198, 236, 255);
 }
 
-.markdown-box{
+#markdown-box{
   background-color:#333;
   padding: 1rem 1.5rem;
   border-radius: 0.5em;
 }
 
-.markdown-box h1{
+#markdown-box h1{
   padding: 0 0 0 0;
   
 }
 
-.markdown-box a {
+code{
+  white-space:normal;
+}
+
+#markdown-box a {
   text-decoration: underline;
 } 
 
-#shown-false{
+.shown-false{
   width:fit-content;
   height:fit-content;
 }
 
-#shown-true{
+.shown-true{
   padding-bottom: 0.5em;
 }
 
@@ -41,15 +45,22 @@
   gap: 2em;
 }
 
+img{
+  max-width: min(calc(950px), calc((100vw - 7rem)));
+}
+
 @media screen and (min-width: 950px) {
   #git-project{
     display:grid;
     grid-template-columns: 1fr 1fr;
     gap: 2em;
   }
+  img{
+    max-width: min(calc(536px), calc((100vw - 12rem) / 2));
+  }
+  #markdown-box{
+    max-width: min(calc(536px), calc((100vw - 12rem) / 2));
+  }
 }
 
-img{
-  max-width: min(calc(536px), calc((100vw - 12rem) / 2));
-}
 

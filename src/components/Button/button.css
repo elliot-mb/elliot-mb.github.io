@@ -1,0 +1,25 @@
+.button{
+    border-radius: 1.5em;
+}
+
+.icon-button, .link-button{
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    background-color: #444;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    width:fit-content;
+    max-height: 3.25rem;
+    margin: 0 auto;
+}
+  
+.icon-button-text{
+padding: 0.5em 0 0 0.5em;
+}
+
+.icon-button img{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+  

@@ -9,7 +9,7 @@ import {
 
 import {useParams} from "react-router-dom";
 import {gitProjects} from "../../data/projects.js"
-import {GitResource} from "../../components/GitResource.js";
+import {GitResource} from "../../components/GitResource/GitResource.js";
 
 export function GitProject() {
 
@@ -37,9 +37,9 @@ export function GitProject() {
         <div> {/* column 1*/}
           <p>{project.tagline}</p>
         </div>
-        <div className="markdown-box" id={`shown-${readmeShown}`}>
-            <button id="readme" onClick={() => setShown(!readmeShown)}>README.md</button>
-            <GitResource url={project.url} display={readmeShown}/>
+        <div className={`shown-${readmeShown}`} id="markdown-box">
+          <button id="readme" onClick={() => setShown(!readmeShown)}>README.md</button>
+          <GitResource url={project.url} display={readmeShown}/>
         </div>
       </div>
     </div> 

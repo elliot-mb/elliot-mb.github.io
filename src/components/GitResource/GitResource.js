@@ -80,7 +80,7 @@ export class GitResource extends React.Component {
             <div>
               <h2>An error occured</h2>
               <p>{this.state.errmsg}</p>
-              <p>This repository may be private.</p>
+              <p><strong>This repository may be private.</strong></p>
             </div>
           )
         default:

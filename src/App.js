@@ -13,15 +13,14 @@ import {Home} from "./pages/Home/Home.js";
 import {Projects} from "./pages/Projects/Projects.js";
 import {GitProject} from "./pages/GitProject/GitProject.js";
 import {Experience} from "./pages/Experience/Experience.js";
-import {NotFound} from "./pages/NotFound/NotFound.js"
-
-const users = ["Holly", "Steve", "Jason", "Paula"];
+import {NotFound} from "./pages/NotFound/NotFound.js";
+import {Footer} from "./components/Footer/Footer.js";
 
 function App() {
   return (
-    <div>    
+    <div className="body">    
       <Router>
-        <div className="body">
+        <div>
           <div id="hero">
             <h1>ElliotMB</h1>
             <nav>
@@ -49,6 +48,7 @@ function App() {
           </Routes>
         </div>
       </Router>
+      <Footer/>
     </div>
   )
 }

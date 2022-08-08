@@ -7,7 +7,7 @@ a {
 }
 
 a:link {
-  color: #bcf;
+  color: #cad;
 }
 
 a:visited {
@@ -20,7 +20,7 @@ a:hover {
 }
 
 a:active {
-  color: #bca;
+  color: #bcf;
 }
 
 ul{
@@ -61,8 +61,4 @@ li{
   margin: 0 auto;
   max-width: 1200px;
   padding: 0.5rem 2rem 2rem 2rem;
-}
-
-.button{
-  border-radius: 1.5em;
 }
