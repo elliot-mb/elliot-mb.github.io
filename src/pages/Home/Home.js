@@ -28,7 +28,8 @@ export function Home() {
 
         <div className="home-content"> {/*column 2*/}
           <h2>Hello! I'm Elliot</h2>
-          <p>I'm a second-year BSc Computer Science Student at the University of Bristol. Aspiring software/web developer who's self-motivated and enjoys programming and solving problems.</p>
+          <p>I'm a second-year BSc Computer Science Student at the University of Bristol.<br/>Aspiring software/web developer who's self-motivated and enjoys programming and solving problems.</p>
+          <p>Currently looking for an internship for summer 2023!</p>
         </div>
       </div>
  
