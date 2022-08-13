@@ -1,7 +1,7 @@
 {
   "name": "v0.2",
   "version": "0.1.0",
-  "hompage": "https://elliot-mb.github.io",
+  "hompage": "https://elliotmb.dev",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
