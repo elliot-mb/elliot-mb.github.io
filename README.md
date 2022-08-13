@@ -1,6 +1,6 @@
 # [elliotmb.dev](https://elliot-mb.github.io/) 
 My personal website which is currently in development (unfinished build is published to github pages).\
-It will be undergoing continuous changes, and will eventually recieve a custom domain name. 
+It will be undergoing continuous changes.
 
 
 ## Available Scripts
