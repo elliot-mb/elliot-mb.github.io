@@ -59,12 +59,21 @@ li{
 
 .content{
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1300px;
   padding: 0.5rem 2rem 2rem 2rem;
 }
 
 h3 {
   margin-top:0;
+}
+
+.desc{
+  margin: 0 2rem 0 2rem;
+}
+/* all indented content */
+
+#elliot-mb{
+  color: #eee;
 }
 
 @media screen and (max-width: 566px) { 

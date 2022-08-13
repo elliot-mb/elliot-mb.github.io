@@ -72,6 +72,10 @@
     max-width:12rem;
     padding-bottom: 1rem;
   }
+
+  .link-button{
+    margin-bottom: 0.75em;
+  }
 }
 
 

@@ -22,7 +22,9 @@ function App() {
       <Router>
         <div>
           <div id="hero">
-            <h1>ElliotMB</h1>
+            <h1>
+              <Link id="elliot-mb" to="/">ElliotMB</Link>
+            </h1>
             <nav>
               <ul className="nav-bar">
                 <li className="nav-link">
