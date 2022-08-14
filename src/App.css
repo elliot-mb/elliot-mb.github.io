@@ -90,4 +90,8 @@ h3 {
     display:block;
     padding: 0.001rem;
   }
+
+  .desc{
+    margin: 0 0rem 0 0rem;
+  }
 }
