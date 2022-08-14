@@ -7,8 +7,7 @@
 }
 
 .project-image{
-  max-width: 21rem;
-  max-height: 15rem;
+  width: 21rem;
   padding-bottom: 0rem;
 }
 
@@ -50,7 +49,7 @@
   padding-bottom: 0.6em;
 }
 
-@media screen and (max-width: 1260px){
+@media screen and (max-width: 1325px){
   .projects ul{
     grid-template-columns: 1fr 1fr;
   }
@@ -70,8 +69,7 @@
 
 @media screen and (max-width: 520px) {
   .project-image{
-    max-width:18rem;
-    max-height:15rem;
+    width:18rem;
   }
 
   .link-list-links{
@@ -85,22 +83,19 @@
   .projects li{
     height: 29rem;
   }
-}
 
-@media screen and (max-width: 465px){
-  .project-image{
-    max-width:15rem;
-    max-height:12rem;
+  .desc{
+    margin: 0 0rem 0 0rem;
   }
 }
 
 @media screen and (max-width: 432px){
   .project-image{
-    display:none;
+    width:15rem;
   }
 
   .projects li{
-    height: 17rem;
+    height: 25rem;
   }
 }
 
