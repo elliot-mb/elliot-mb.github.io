@@ -15,11 +15,15 @@ export function LinkList ({root, lis}) {
         <div>
           <h3>{li.name}</h3>
           <img className="project-image" src={li.thumb} alt={li.name}/>
+          {
+            li.tagline !== undefined ? <p>{li.tagline}</p> :
+            <></>
+          }
         </div>
         <div className="link-list-links" >
           <LinkButton to={`${root}/${li.name}`} alt={`Learn more about ${li.name}`} text="Learn more"/>
           {
-            li.url !== undefined ? <IconButton 
+            li.url !== undefined && li.url !== "" ? <IconButton 
             icon={
               new URL(li.url).hostname === "github.com" ?
               GithubIcon : LinkIcon

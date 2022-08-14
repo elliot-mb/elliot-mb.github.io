@@ -1,3 +1,4 @@
+
 #readme{
   color: #cad;
   border: none;
@@ -39,15 +40,11 @@ code{
   padding-bottom: 0.5em;
 }
 
-#git-project{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap: 2em;
-}
-
 img{
   max-width: min(calc(950px), calc((100vw - 7rem)));
 }
+
+
 
 @media screen and (min-width: 950px) {
   #git-project{
@@ -62,5 +59,3 @@ img{
     max-width: min(calc(536px), calc((100vw - 12rem) / 2));
   }
 }
-
-

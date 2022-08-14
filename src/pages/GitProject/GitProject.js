@@ -2,7 +2,7 @@ import React, {
   useEffect,
   useState
  } from 'react';
-import "./GitProject.css"
+import "./gitproject.css"
 import {
   Navigate
 } from "react-router-dom";
@@ -37,7 +37,9 @@ export function GitProject() {
       <div id="git-project">
         <div> {/* column 1*/}
           <h3>{project.tagline}</h3>
-          <ParagraphList xs={project.content}/>
+          <div className="desc">
+            <ParagraphList xs={project.content}/>
+          </div>
         </div>
         <div className={`shown-${readmeShown}`} id="markdown-box">
           <button id="readme" onClick={() => setShown(!readmeShown)}>README.md</button>
