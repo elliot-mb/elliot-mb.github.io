@@ -16,7 +16,7 @@ export function LinkList ({root, lis}) {
           <h3>{li.name}</h3>
           <img className="project-image" src={li.thumb} alt={li.name}/>
           {
-            li.tagline !== undefined ? <p>{li.tagline}</p> :
+            li.tagline !== undefined ? <p className="tagline">{li.tagline}</p> :
             <></>
           }
         </div>
