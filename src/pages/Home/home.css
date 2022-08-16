@@ -26,6 +26,10 @@
   height: 2.5rem;
 }
 
+.home-content h3{
+  margin-top: 2rem;
+}
+
 @media screen and (min-width: 1050px) {
   #home{
     grid-template-columns: 1fr 1fr 1fr;
@@ -49,5 +53,6 @@
   .contacts{
     display: flex;
     flex-direction: column;
+    float: left;
   }
 }
