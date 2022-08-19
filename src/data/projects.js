@@ -28,8 +28,8 @@ export const gitProjects = [
     name:"Polynomial calculator",
     thumb:Polynomial,
     url:"https://github.com/elliot-mb/points-to-polynomial",
-    tagline:"Generate terms of a polynomial to follow a set of points.",
-    content:["This program generates simplest (order n-1) polynomial which crosses n points with distinct x positions.", "I developed this program to test my Haskell skills, and create an algorithm I'd known about for a while and found very interesting.", "Contains Gaussian Elimination."]
+    tagline:"Generate the unique polynomial corresponding to a set of distinct points.",
+    content:["This program generates the polynomial which crosses a given n distinct points.", "This program I made to test my Haskell skills, and create an algorithm I'd known about for a while and found very interesting.", "Contains Gaussian Elimination."]
   },
   {
     name:"RPN Logic Parser",
