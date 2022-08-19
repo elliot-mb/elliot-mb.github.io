@@ -7,6 +7,10 @@ It will be undergoing continuous changes.
 
 In the project directory, you can run:
 
+### `npm run deploy -- -m "changes"`
+
+Pushes to my `gh-pages` branch to deploy.
+
 ### `npm start`
 
 Runs the app in the development mode.\
