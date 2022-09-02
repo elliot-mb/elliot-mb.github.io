@@ -26,12 +26,22 @@
   flex-direction:column;
 }
 
+.projects .icon-button {
+  font-size: 1.25rem;
+}
+
+.projects .link-button{
+  font-size: 1.25rem;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+}
+
 .image-text{
   position:relative;
-  font-size: 2rem;
-  margin-bottom: -3.1rem;
-  color: #0f08;
-  background-color: rgb(255, 255, 255);
+  padding: 0.5rem;
+  margin-bottom: -2.7rem;
+  color: rgb(198, 236, 255);
+  background-color: #000d;
 }
 
 .link-list-li .tagline{
@@ -48,18 +58,13 @@
   margin-top: 0.5em;
 }
 
-.icon-button img{
+.projects .icon-button img{
   width: 1.75rem;
   height: 1.75rem;
 }
 
 .icon-button-text{
   padding: 0.2em 0 0 0.5em;
-}
-
-.link-button{
-  padding-top: 0.6em;
-  padding-bottom: 0.6em;
 }
 
 @media screen and (max-width: 1325px){
@@ -78,6 +83,8 @@
   margin-top: auto;
   display:flex;
   flex-direction:row;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 @media screen and (max-width: 520px) {
@@ -93,8 +100,12 @@
     flex-direction: column;
   }
 
-  .link-button{
-    margin-bottom: 0.75em;
+  .projects .link-button{
+    margin: 0 auto;
+  }
+
+  .projects .icon-button{
+    margin: 0 auto;
   }
 
   .projects li{

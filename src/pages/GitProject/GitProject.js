@@ -4,9 +4,11 @@ import React, {
  } from 'react';
 import "./gitproject.css"
 import {
-  Navigate
+  Navigate,
+  Link
 } from "react-router-dom";
 
+import {LinkButton} from "../../components/Button/Button.js";
 import {ParagraphList} from "../../components/List/List.js";
 import {useParams} from "react-router-dom";
 import {gitProjects} from "../../data/projects.ts";
@@ -35,11 +37,12 @@ export function GitProject() {
     <div className="content">
       <h1>{projectClass}</h1>
       <div id="git-project">
-        <div> {/* column 1*/}
+        <div className="git-project-info"> {/* column 1*/}
           <h3>{project.tagline}</h3>
           <div className="desc">
             <ParagraphList xs={project.content}/>
           </div>
+          <LinkButton className="back-button" to="/projects" alt="back-button" text="< Back"/>
         </div>
         <div className={`shown-${readmeShown}`} id="markdown-box">
           <button id="readme" onClick={() => setShown(!readmeShown)}>README.md</button>
