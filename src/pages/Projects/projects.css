@@ -7,6 +7,11 @@
 }
 
 .project-image{
+  margin: 0 auto;
+  width: 21rem;
+}
+
+.project-image img{
   width: 21rem;
   padding-bottom: 0rem;
 }
@@ -19,6 +24,14 @@
   display:flex;
   height: 26rem;
   flex-direction:column;
+}
+
+.image-text{
+  position:relative;
+  font-size: 2rem;
+  margin-bottom: -3.1rem;
+  color: #0f08;
+  background-color: rgb(255, 255, 255);
 }
 
 .link-list-li .tagline{
@@ -72,6 +85,10 @@
     width:18rem;
   }
 
+  .project-image img{
+    width:18rem;
+  }
+
   .link-list-links{
     flex-direction: column;
   }
@@ -90,8 +107,12 @@
     width:15rem;
   }
 
+  .project-image img{
+    width:15rem;
+  }
+
   .projects li{
-    height: 25rem;
+    height: 27rem;
   }
 }
 

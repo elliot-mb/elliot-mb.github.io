@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import "./projects.css";
 
 import {LinkList} from "../../components/List/List.js";
-import {gitProjects} from "../../data/projects.js";
-import {otherProjects} from "../../data/projects.js";
+import {gitProjects, otherProjects} from "../../data/projects.ts";
 
 export function Projects() {
 

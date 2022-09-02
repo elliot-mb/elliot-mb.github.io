@@ -9,7 +9,7 @@ import {
 
 import {ParagraphList} from "../../components/List/List.js";
 import {useParams} from "react-router-dom";
-import {gitProjects} from "../../data/projects.js"
+import {gitProjects} from "../../data/projects.ts";
 import {GitResource} from "../../components/GitResource/GitResource.js";
 
 export function GitProject() {

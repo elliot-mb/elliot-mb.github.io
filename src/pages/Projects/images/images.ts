@@ -1,3 +1,4 @@
+import Default from "./default.png";
 import ScotlandYard from "./scotland.png";
 import PlaylistPuller from "./playlist.png";
 import RPNParser from "./rpn.jpg";
@@ -9,6 +10,7 @@ import Polynomial from "./poly.png";
 import Portfolio from "./portfolio.png";
 
 export const images : { [key: string]: string } = {
+    nul: Default,
     scy: ScotlandYard,
     plp: PlaylistPuller,
     rpn: RPNParser,
