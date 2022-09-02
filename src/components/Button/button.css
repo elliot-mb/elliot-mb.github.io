@@ -3,14 +3,13 @@
 }
 
 .icon-button, .link-button{
-    border-radius: 0.5rem;
-    font-size: 1.25rem;
-    background-color: #444;
-    padding: 0.5rem 0.75rem;
-    display: flex;
-    width:fit-content;
-    max-height: 3.25rem;
-    margin: 0 auto;
+  border-radius: 0.5rem;
+  background-color: #444;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  flex-direction: row;
+  width:fit-content;
+  max-height: 3.25rem;
 }
   
 .icon-button-text{

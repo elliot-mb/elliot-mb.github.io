@@ -1,4 +1,4 @@
-.body{
+body{
   color: #eee;
 }
 
@@ -60,7 +60,7 @@ li{
 .content{
   margin: 0 auto;
   max-width: 1300px;
-  padding: 0.5rem 2rem 2rem 2rem;
+  padding: 0.5rem 2rem 3rem 2rem;
 }
 
 h3 {
@@ -74,6 +74,14 @@ h3 {
 
 #elliot-mb{
   color: #eee;
+}
+
+.body{
+  min-height: 100vh;
+}
+
+.footer{
+  margin-top: -2.5rem;
 }
 
 @media screen and (max-width: 566px) { 

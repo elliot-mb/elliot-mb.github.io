@@ -1,3 +1,4 @@
+import Default from "./default.png";
 import ScotlandYard from "./scotland.png";
 import PlaylistPuller from "./playlist.png";
 import RPNParser from "./rpn.jpg";
@@ -7,10 +8,13 @@ import GE from "./matrix.png";
 import Raytracing from "./tracer.gif"
 import Polynomial from "./poly.png";
 import Portfolio from "./portfolio.png";
+import PlaylistConverter from "./playlist_conv.png"
 
 export const images : { [key: string]: string } = {
+    nul: Default,
     scy: ScotlandYard,
     plp: PlaylistPuller,
+    plc: PlaylistConverter,
     rpn: RPNParser,
     ltc: LeetCode,
     elr: Euler,

@@ -23,6 +23,10 @@
   
 }
 
+.git-project-info{
+  margin-bottom: 1rem;
+}
+
 code{
   white-space:normal;
 }
@@ -44,7 +48,10 @@ img{
   max-width: min(calc(950px), calc((100vw - 7rem)));
 }
 
-
+#git-project .back-button{
+  margin: 0 0;
+  font-size: 1rem;
+}
 
 @media screen and (min-width: 950px) {
   #git-project{
