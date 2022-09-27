@@ -63,12 +63,13 @@ export const gitProjects: Project[] = [
     content:["Originally posed to us as a challenge during term 1, year 1 of my course at Bristol, I got round to programming it later in the year, in Java.", "The program takes a logical expression with or without unknowns. If the expression has unknowns, a compact truth table is generated, else the boolean equivalence of the statement is printed.", "I took an object-oriented approach to this problem, creating a slew of operator/value objects governed by interfaces.<br>These were used to completely tokenise the input RPN string. This had advantages, including enabling the array of tokens/objects to be processed directly, calling token interface methods one by one without much external logic."]
   },
   {
-    name:"LeetCode solutions",
-    thumb:images.ltc,
-    status: "Ongoing",
-    url:"https://github.com/elliot-mb/leetcodes",
-    tagline:"My attempts at LeetCode problems.",
-    content:[]
+    name:"Custom Audio Visualiser",
+    thumb:images.vis,
+    status:"Complete",
+    url:"https://github.com/elliot-mb/custom-visualiser",
+    tagline:"Set parameters for an audio-visualiser and upload music to see it react, live. Uses p5.js.",
+    content:["Through use and understanding of p5's FFT function, I was able to create a user interface and visualiser to react to all my music.",
+    "It makes listening more fun."]
   },
   {
     name:"Gaussian Elimination Java",
@@ -87,9 +88,17 @@ export const gitProjects: Project[] = [
     content:[]
   },
   {
+    name:"LeetCode solutions",
+    thumb:images.ltc,
+    status: "Ongoing",
+    url:"https://github.com/elliot-mb/leetcodes",
+    tagline:"My attempts at LeetCode problems.",
+    content:[]
+  },
+  {
     name:"Project Euler solutions",
     thumb:images.elr,
-    status: "Complete",
+    status: "Ongoing",
     url:"https://github.com/elliot-mb/project-euler-solutions",
     tagline:"Programmatic solutions to select Project Euler problems.",
     content:["These were mainly written a long time ago, so may not be representitive of my current ability or practise."]

@@ -9,6 +9,7 @@ import Raytracing from "./tracer.gif"
 import Polynomial from "./poly.png";
 import Portfolio from "./portfolio.png";
 import PlaylistConverter from "./playlist_conv.png"
+import Visualiser from "./visualiser.png"
 
 export const images : { [key: string]: string } = {
     nul: Default,
@@ -21,5 +22,6 @@ export const images : { [key: string]: string } = {
     gsl: GE,
     rtc: Raytracing,
     ply: Polynomial,
-    ptf: Portfolio
+    ptf: Portfolio,
+    vis: Visualiser
 };
