@@ -16,7 +16,7 @@ export const gitProjects: Project[] = [
     name:"Scotland Yard OOP Coursework",
     thumb:images.scy,
     status: "Complete",
-    url:"https://github.com/elliot-mb/scotland-yard",
+    url:"https://github.com/jade-bejide/ScotlandYard",
     tagline:"Developing and creating an AI for the Scotland Yard boardgame.",
     content:[]
   },
