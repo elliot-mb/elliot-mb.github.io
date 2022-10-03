@@ -1,8 +1,8 @@
-import {images} from "../pages/Projects/images/images.ts";
+import {images} from "./project_images";
 
 type Status = "Work in progress" | "Complete" | "Ongoing" ;
 
-type Project = {
+export type Project = {
   name: string,
   thumb: string,
   status: Status,

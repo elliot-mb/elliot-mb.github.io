@@ -14,7 +14,7 @@ import {Projects} from "./pages/Projects/Projects.js";
 import {GitProject} from "./pages/GitProject/GitProject.js";
 import {Experience} from "./pages/Experience/Experience.js";
 import {NotFound} from "./pages/NotFound/NotFound.js";
-import {Footer} from "./components/Footer/Footer.js";
+import {Footer} from "./components/Footer/Footer";
 
 function App() {
   return (

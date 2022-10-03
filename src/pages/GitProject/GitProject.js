@@ -7,12 +7,13 @@ import {
   Navigate,
   Link
 } from "react-router-dom";
+import Container from "../../components/Container/Container";
 
-import {LinkButton} from "../../components/Button/Button.js";
-import {ParagraphList} from "../../components/List/List.js";
+import {LinkButton} from "../../components/Button/Button";
+import {ParagraphList} from "../../components/List/List";
 import {useParams} from "react-router-dom";
 import {gitProjects} from "../../data/projects.ts";
-import {GitResource} from "../../components/GitResource/GitResource.js";
+import {GitResource} from "../../components/GitResource/GitResource";
 
 export function GitProject() {
 
@@ -38,11 +39,11 @@ export function GitProject() {
       <h1>{projectClass}</h1>
       <div id="git-project">
         <div className="git-project-info"> {/* column 1*/}
-          <h3>{project.tagline}</h3>
-          <div className="desc">
-            <ParagraphList xs={project.content}/>
-          </div>
-          <LinkButton className="back-button" to="/projects" alt="back-button" text="< Back"/>
+          <Container child={<>
+            <h3>{project.tagline}</h3>
+            <Container child={<ParagraphList xs={project.content}/>}/>
+            <LinkButton className="back-button" to="/projects" text="< Back"/>
+          </>}/>
         </div>
         <div className={`shown-${readmeShown}`} id="markdown-box">
           <button id="readme" onClick={() => setShown(!readmeShown)}>README.md</button>
