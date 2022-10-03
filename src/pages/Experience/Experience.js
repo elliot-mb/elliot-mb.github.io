@@ -3,6 +3,7 @@ import { React,
          useState } from "react";
 import CV from "./files/CV.pdf";
 import "./experience.css";
+import Container from "../../components/Container/Container";
 
 export function Experience(){
 
@@ -12,10 +13,8 @@ export function Experience(){
 
   return(
     <div className="content">
-      <h2>Experience</h2>
-      <div className="desc">
-        <a href={CV} target="_blank" rel="noreferrer">CV</a>
-      </div>
+      <h1>Experience</h1>
+      <Container child={<a href={CV} target="_blank" rel="noreferrer">CV</a>}/>
     </div>
   )
 }

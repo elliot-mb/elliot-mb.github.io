@@ -14,7 +14,8 @@
 
 #markdown-box{
   background-color:#333;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  margin-bottom: 1rem;
   border-radius: 0.5em;
 }
 
@@ -23,6 +24,10 @@
   
 }
 
+#markdown-box a {
+  text-decoration: underline;
+} 
+
 .git-project-info{
   margin-bottom: 1rem;
 }
@@ -30,10 +35,6 @@
 code{
   white-space:normal;
 }
-
-#markdown-box a {
-  text-decoration: underline;
-} 
 
 .shown-false{
   width:fit-content;

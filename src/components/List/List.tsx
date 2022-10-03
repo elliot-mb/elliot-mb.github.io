@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkButton, IconButton } from "../Button/Button.js";
+import { LinkButton, IconButton } from "../Button/Button";
 import {
   Link
 } from "react-router-dom";
@@ -7,8 +7,17 @@ import "./link.css";
 import GithubIcon from "../../pages/Home/images/github.svg";
 import LinkIcon from "../../pages/Home/images/link.svg";
 
-export function LinkList ({root, lis}) {
-  let elements = [];
+type Link = {
+  root: string,
+  lis: any[]
+}
+
+type Paragraph = {
+  xs: string[]
+}
+
+export function LinkList ({root, lis}: Link) {
+  let elements: JSX.Element[] = [];
   lis.forEach((li, i) => {
     elements.push(
       <li className="link-list-li" key={i}>
@@ -44,11 +53,11 @@ export function LinkList ({root, lis}) {
   );
 }
 
-export function ParagraphList ({xs}) {
-  let elements = [];
+export function ParagraphList ({xs} : Paragraph) {
+  let elements: JSX.Element[] = [];
   xs.forEach((x, i) => {
-    let blocks = [];
-    {x.split("<br>").forEach((block, j) => {
+    let blocks: JSX.Element[] = [];
+    {x.split("<br>").forEach((block: string, j: number) => {
         blocks.push(<span key={j}>{block}</span>); 
         blocks.push(<br key={j + blocks.length + 1}/>); //adds newlines, avoids key collisions 
     })}

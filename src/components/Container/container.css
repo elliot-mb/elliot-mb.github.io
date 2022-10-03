@@ -1,0 +1,10 @@
+.container{
+    margin: 0 2em 0 2em;
+}
+  /* all indented content */
+
+@media screen and (max-width: 520px) {
+  .container{
+    margin: 0 0rem 0 0rem;
+  }
+}
