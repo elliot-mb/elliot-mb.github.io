@@ -2,6 +2,14 @@
 My personal website which is currently in development (unfinished build is published to github pages).\
 It will be undergoing continuous changes.
 
+## Repository structure
+
+In this repository, you can find the following top-level directories:
+
+- ``build`` where the deployed app is stored (contents reflect ``gh-pages`` branch).
+- ``customTypings`` where I've inserted some typescript "modules" which I've used to allow the loading of images in ReactTS. 
+- ``public`` contains some resources and settings.
+- ``src`` contains the project; my ``pages``, ``components``, ``data`` etc. Some pages generate directly from this data allowing easy modification of some content pages. 
 
 ## Available Scripts
 
