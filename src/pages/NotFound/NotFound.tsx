@@ -6,7 +6,7 @@ import {
 import Container from "../../components/Container/Container";
 
 
-export function NotFound() {
+export const NotFound = () => {
 
   useEffect(() => {
     document.title = "Page not found | Elliot Buckingham";

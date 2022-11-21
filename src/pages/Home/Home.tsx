@@ -4,10 +4,9 @@ import { IconButton } from '../../components/Button/Button';
 import GithubIcon from "./images/github.svg";
 import EmailIcon from "./images/email.svg";
 import LinkedInIcon from "./images/linkedin.svg";
-import Container from "../../components/Container/Container";
 import { Intro } from "../../components/Intro/Intro";
 
-export function Home() {
+export const Home = () => {
 
   useEffect(() => {
     document.title = "Home | Elliot Buckingham";
@@ -25,13 +24,13 @@ export function Home() {
 
         <div className="home-content"> 
           <h1>Hello! I'm Elliot</h1>
-          <Container child={Intro}/> 
+          {Intro}
 
           <h3>Contact me</h3>
           <div className="contacts">
-            <IconButton icon={GithubIcon} url="https://github.com/elliot-mb" target="_blank" rel="noreferrer" alt="Github" text="Github" />
-            <IconButton icon={EmailIcon} url="mailto:elliot.m.buckingham@gmail.com" target="_blank" rel="noreferrer" alt="Email" text="Email" />
-            <IconButton icon={LinkedInIcon} url="https://www.linkedin.com/in/elliotmb/" target="_blank" rel="noreferrer" alt="LinkedIn" text="LinkedIn" />
+            <IconButton icon={GithubIcon} url="https://github.com/elliot-mb" target="_blank" alt="Github" text="Github" />
+            <IconButton icon={EmailIcon} url="mailto:elliot.m.buckingham@gmail.com" target="_blank" alt="Email" text="Email" />
+            <IconButton icon={LinkedInIcon} url="https://www.linkedin.com/in/elliotmb/" target="_blank" alt="LinkedIn" text="LinkedIn" />
           </div>
         </div>
       </div>

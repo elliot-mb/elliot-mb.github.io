@@ -1,0 +1,9 @@
+.inline{
+    display: grid;
+}
+
+.inline-project-page-title{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}

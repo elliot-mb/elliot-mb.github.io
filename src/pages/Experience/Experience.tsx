@@ -1,11 +1,9 @@
-import { React,  
-         useEffect,
-         useState } from "react";
+import React, { useEffect } from "react";
 import CV from "./files/CV.pdf";
 import "./experience.css";
 import Container from "../../components/Container/Container";
 
-export function Experience(){
+export const Experience = () => {
 
   useEffect(() => {
     document.title = "Experience | Elliot Buckingham";
