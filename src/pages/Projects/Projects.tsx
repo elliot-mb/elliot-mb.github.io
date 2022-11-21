@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import "./projects.css";
-import Dropdown from 'react-bootstrap/Dropdown';
 import {LinkList} from "../../components/List/List";
-import {gitProjects, otherProjects} from "../../data/projects.ts";
+import {gitProjects, otherProjects} from "../../data/projects";
 import Container from "../../components/Container/Container";
 
-export function Projects() {
+export const Projects = () => {
 
   useEffect(() => {
     document.title = "Projects | Elliot Buckingham";

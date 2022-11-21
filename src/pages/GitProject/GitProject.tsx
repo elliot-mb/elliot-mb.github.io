@@ -4,18 +4,19 @@ import React, {
  } from 'react';
 import "./gitproject.css"
 import {
-  Navigate,
-  Link
+  Navigate
 } from "react-router-dom";
-import Container from "../../components/Container/Container";
 
 import {LinkButton} from "../../components/Button/Button";
 import {ParagraphList} from "../../components/List/List";
 import {useParams} from "react-router-dom";
-import {gitProjects} from "../../data/projects.ts";
-import {GitResource} from "../../components/GitResource/GitResource";
 
-export function GitProject() {
+import {GitResource} from "../../components/GitResource/GitResource";
+import {Inline} from "../../components/Inline/Inline";
+
+import {gitProjects} from "../../data/projects";
+
+export const GitProject = () => {
 
   //state 
   const [readmeShown, setShown] = useState(false);
@@ -36,14 +37,13 @@ export function GitProject() {
   //const response = gitResource(project.url);
   return(
     <div className="content">
-      <h1>{projectClass}</h1>
+      
+      <Inline className="project-page-title" children={[<h1>{projectClass}</h1>,<LinkButton id="back-button" to="/projects" text="< Back" alt="Back button"/>]}/>
+
       <div id="git-project">
         <div className="git-project-info"> {/* column 1*/}
-          <Container child={<>
-            <h3>{project.tagline}</h3>
-            <Container child={<ParagraphList xs={project.content}/>}/>
-            <LinkButton className="back-button" to="/projects" text="< Back"/>
-          </>}/>
+          <h3>{project.tagline}</h3>
+          <ParagraphList xs={project.content}/>
         </div>
         <div className={`shown-${readmeShown}`} id="markdown-box">
           <button id="readme" onClick={() => setShown(!readmeShown)}>README.md</button>
