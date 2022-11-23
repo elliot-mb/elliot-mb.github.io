@@ -16,7 +16,7 @@ export const Burger = (props: {children: JSX.Element[]}) => {
             <ul className={`burger-menu ${open ? "show-menu" : "hide-menu"}`}>
                 { 
                     props.children.map((e, i) => {
-                        return <li className="burger-menu-nav-link" key={i}>
+                        return <li onClick={toggle} className="burger-menu-nav-link" key={i}>
                             {e}
                         </li>;
                     })

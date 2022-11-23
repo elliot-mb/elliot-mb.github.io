@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import "./home.css";
 import { IconButton } from '../../components/Button/Button';
-import GithubIcon from "./images/github.svg";
-import EmailIcon from "./images/email.svg";
-import LinkedInIcon from "./images/linkedin.svg";
+import GithubIcon from "../../assets/github.svg";
+import EmailIcon from "../../assets/email.svg";
+import LinkedInIcon from "../../assets/linkedin.svg";
 import { Intro } from "../../components/Intro/Intro";
 
 export const Home = () => {

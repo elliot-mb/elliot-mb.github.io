@@ -4,8 +4,8 @@ import {
   Link
 } from "react-router-dom";
 import "./link.css"; 
-import GithubIcon from "../../pages/Home/images/github.svg";
-import LinkIcon from "../../pages/Home/images/link.svg";
+import GithubIcon from "../../assets/github.svg";
+import LinkIcon from "../../assets/link.svg";
 
 type Link = {
   root: string,

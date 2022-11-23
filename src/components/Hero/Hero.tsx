@@ -23,7 +23,7 @@ export const Hero = () => {
 
     return(
         <div id="hero">
-            <h1>
+            <h1 className="hero h1">
             <Link id="elliot-mb" to="/">ElliotMB</Link>
             </h1>
             <nav>

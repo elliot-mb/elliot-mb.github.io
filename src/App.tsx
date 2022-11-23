@@ -11,6 +11,7 @@ import {Projects} from "./pages/Projects/Projects";
 import {GitProject} from "./pages/GitProject/GitProject";
 import {Experience} from "./pages/Experience/Experience";
 import {NotFound} from "./pages/NotFound/NotFound";
+import {Blog} from "./pages/Blog/Blog";
 
 import {Hero} from "./components/Hero/Hero";
 import {Footer} from "./components/Footer/Footer";
@@ -28,6 +29,7 @@ function App() {
               <Route path="/projects" element={<Projects/>}/>
               <Route path="/projects/:projectClass/*" element={<GitProject/>} />
               <Route path="/experience" element={<Experience/>} />
+              <Route path="/blog" element={<Blog/>}/>
               <Route path="/not-found" element={<NotFound/>}/>
               <Route path={"*"} element={<NotFound/>}/>
             </Routes>
