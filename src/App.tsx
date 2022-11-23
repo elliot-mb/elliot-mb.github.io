@@ -3,8 +3,7 @@ import React from 'react';
 import {
   HashRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 import {Home} from "./pages/Home/Home"; 
@@ -12,6 +11,8 @@ import {Projects} from "./pages/Projects/Projects";
 import {GitProject} from "./pages/GitProject/GitProject";
 import {Experience} from "./pages/Experience/Experience";
 import {NotFound} from "./pages/NotFound/NotFound";
+
+import {Hero} from "./components/Hero/Hero";
 import {Footer} from "./components/Footer/Footer";
 
 function App() {
@@ -20,27 +21,7 @@ function App() {
       <div className="body">    
         <Router>
           <div>
-            <div id="hero">
-              <h1>
-                <Link id="elliot-mb" to="/">ElliotMB</Link>
-              </h1>
-              <nav>
-                <ul className="nav-bar">
-                  <li className="nav-link">
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li className="nav-link">
-                    <Link to="/projects">Projects</Link>
-                  </li>
-                  <li className="nav-link">
-                    <Link to="/experience">Experience</Link>
-                  </li>
-                  <li className="nav-link">
-                    <Link to="/blog">Blog</Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+            <Hero />
 
             <Routes>
               <Route path="/" element={<Home/>} />

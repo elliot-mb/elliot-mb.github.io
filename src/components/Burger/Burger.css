@@ -1,0 +1,58 @@
+.burger{
+    position: relative;
+}
+
+.burger-button{
+    font-size: 3rem;
+    position: fixed;
+    z-index: 10;
+    right: 2rem;
+    top: 0.5rem;
+    border: 0;
+    padding: 0;
+    background-color: #fff0;
+    color: #eee;
+}
+
+.burger-menu{
+    text-align: right;
+    padding: 5rem 2rem 2rem 2rem; 
+    overflow-y: scroll;
+    list-style: none;
+    position: fixed;
+    right: 0rem;
+    top: -1rem;
+    background: #cadb;
+    /* left: 20rem; */
+    bottom: 0rem;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 9;
+    max-width: 10rem;
+}
+ /* pretty interesting class behaviour  */
+.burger-menu.show-menu{
+    width: 100%;
+}
+   
+
+.burger-menu a {
+    color: #333;
+}
+
+.burger-menu a:hover {
+    color: #eee;
+}
+
+.burger-menu.hide-menu{
+    display: none;
+}
+
+.burger-menu-nav-link{
+    font-size: 1.25rem;
+    user-select: none;
+}
+
+/* {
+    padding-bottom: 1rem;
+} */
