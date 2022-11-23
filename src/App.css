@@ -52,6 +52,10 @@ li{
   padding: 0 1rem 0 1rem;
 }
 
+.burger {
+  display: none;
+}
+
 #hero h1{
   padding: 0rem 2rem 0rem 2rem;
   font-size: 2em;
@@ -71,27 +75,35 @@ h3 {
   color: #eee;
 }
 
-.body{
+/* .body{
   min-height: 100vh;
-}
+} */
 
 .footer{
-  margin-top: -2.5rem;
+  margin-top: 2.5rem;
 }
 
-@media screen and (max-width: 566px) { 
+/* @media screen and (max-width: 566px) { 
 
   #hero{
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0rem;
   }
-}
+} */
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 645px) {
 
-  #hero{
+  /* #hero{
     display:block;
     padding: 0.001rem;
+  } */
+
+  .nav-bar {
+    display:none;
+  }
+
+  .burger {
+    display:block;
   }
 
   .desc{
