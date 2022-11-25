@@ -1,15 +1,15 @@
-import Default from "../assets/default.png";
-import ScotlandYard from "../assets/scotland.png";
-import PlaylistPuller from "../assets/playlist.png";
-import RPNParser from "../assets/rpn.jpg";
-import LeetCode from "../assets/leetcode.png";
-import Euler from "../assets/euler.png";
-import GE from "../assets/matrix.png";
-import Raytracing from "../assets/tracer.gif"
-import Polynomial from "../assets/poly.png";
-import Portfolio from "../assets/portfolio.png";
-import PlaylistConverter from "../assets/playlist_conv.png"
-import Visualiser from "../assets/visualiser.png"
+import Default from "../assets/img/default.png";
+import ScotlandYard from "../assets/img/scotland.png";
+import PlaylistPuller from "../assets/img/playlist.png";
+import RPNParser from "../assets/img/rpn.jpg";
+import LeetCode from "../assets/img/leetcode.png";
+import Euler from "../assets/img/euler.png";
+import GE from "../assets/img/matrix.png";
+import Raytracing from "../assets/img/tracer.gif"
+import Polynomial from "../assets/img/poly.png";
+import Portfolio from "../assets/img/portfolio.png";
+import PlaylistConverter from "../assets/img/playlist_conv.png"
+import Visualiser from "../assets/img/visualiser.png"
 
 // image alias map 
 export const images : { [key: string]: string } = {

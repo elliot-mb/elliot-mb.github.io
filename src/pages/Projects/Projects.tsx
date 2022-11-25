@@ -1,15 +1,19 @@
 import React, { useEffect } from 'react';
 import "./projects.css";
-import {LinkList} from "../../components/List/List";
-import {gitProjects, otherProjects} from "../../data/projects";
+
 import { Link } from 'react-router-dom';
 //import Container from "../../components/Container/Container";
+import {LinkList} from "../../components/List/List";
 
-export const Projects = () => {
+import {gitProjects, otherProjects} from "../../data/projects";
+
+import {setPOJO} from "../../App";
+
+export const Projects = (props: {setPageInfo: setPOJO}) => {
 
   useEffect(() => {
     document.title = "Projects | Elliot Buckingham";
-  });
+  }, []);
 
   return(
     <div className="content">
@@ -21,9 +25,9 @@ export const Projects = () => {
       my <Link to="/blog">blog</Link>.</p>
       <nav className="projects">
         <h2>GitHub</h2>
-        <LinkList root="/projects" lis={gitProjects} />
+        <LinkList className="git" setPageInfo={props.setPageInfo} root="/projects" lis={gitProjects} />
         <h2>Other</h2>
-        <LinkList root="/projects" lis={otherProjects} />
+        <LinkList className="git" setPageInfo={props.setPageInfo} root="/projects" lis={otherProjects} />
       </nav>
     </div>
   )

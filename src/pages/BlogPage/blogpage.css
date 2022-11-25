@@ -1,0 +1,8 @@
+.markdown-html ul{
+    list-style-type:circle;
+}
+
+.markdown-html code{
+    background-color: rgb(82, 82, 82);
+    border-radius: 0.25rem;
+}

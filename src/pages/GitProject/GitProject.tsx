@@ -4,41 +4,45 @@ import React, {
  } from 'react';
 import "./gitproject.css"
 import {
-  Navigate
+  Navigate,
+  useParams
 } from "react-router-dom";
 
 import {LinkButton} from "../../components/Button/Button";
 import {ParagraphList} from "../../components/List/List";
-import {useParams} from "react-router-dom";
-
 import {GitResource} from "../../components/GitResource/GitResource";
 import {Inline} from "../../components/Inline/Inline";
 
-import {gitProjects} from "../../data/projects";
+import {Project, gitProjects} from "../../data/projects";
 
-export const GitProject = () => {
+import {projectNameToPath} from "../../helpers/strings"
+
+export const GitProject = (props: { pageInfo: Project }) => {
 
   //state 
   const [readmeShown, setShown] = useState(false);
 
   useEffect(() => { //cant be called after the return as react hooks are tempermental
     document.title = `${projectClass} | Elliot Buckingham`;
-  });
+  }, []);
 
   const { projectClass } = useParams();
+
   let projectID = -1;
+
   if(!gitProjects.reduce((x, y) => { 
     if(!x) { projectID++; } 
-    return (x || y.name === projectClass);
+    return (x || (projectNameToPath(y.name)) === projectClass);
   }, false)){
     return <Navigate to={"/not-found"}/>
   }
+
   const project = gitProjects[projectID];
   //const response = gitResource(project.url);
   return(
     <div className="content">
       
-      <Inline className="project-page-title" children={[<h1>{projectClass}</h1>,<LinkButton id="back-button" to="/projects" text="< Back" alt="Back button"/>]}/>
+      <Inline className="project-page-title" children={[<h1>{project.name}</h1>,<LinkButton onClick={() => {}} id="back-button" to="/projects" text="< Back" alt="Back button"/>]}/>
 
       <div id="git-project">
         <div className="git-project-info"> {/* column 1*/}

@@ -10,7 +10,7 @@ export const NotFound = () => {
 
   useEffect(() => {
     document.title = "Page not found | Elliot Buckingham";
-  });
+  }, []);
 
   return (
     <div className="content">

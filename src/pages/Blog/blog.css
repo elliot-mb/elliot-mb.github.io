@@ -1,0 +1,28 @@
+.link-list-li.blog{
+    background-color:#333;
+    border-radius: 0.5rem;
+    padding: 1rem 1rem 1rem 1rem;
+    margin-top: 1rem;
+}
+
+.link-list-li.blog:hover{
+    background-color:rgb(82, 82, 82);
+    transition: 0.25s;
+    transform:scale(1.015);
+}
+
+.header.blog{
+    padding: 0;
+    margin: 0;
+    /* color:#bcf; */
+}
+
+.tagline.blog{
+    color:#bcf;
+}
+
+.root.blog {
+    margin-top: 2rem;
+    list-style-type: none;
+    padding: 0rem;
+}
