@@ -13,11 +13,5 @@ export const pages: BlogPageData[] = [
         thumb: undefined,
         tagline: "Introducing a Markdown-driven blogging page to my website.",
         content: require("../assets/md/markdown_blog.md") ///oh my god require!
-    },
-    {
-        name: "Test 2",
-        thumb: undefined,
-        tagline: "Cool test",
-        content: require("../assets/md/test.md")
     }
 ];
