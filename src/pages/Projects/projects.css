@@ -40,12 +40,18 @@
   position:relative;
   padding: 0.5rem;
   margin-bottom: -2.7rem;
-  color: rgb(198, 236, 255);
+  color: #bcf;
   background-color: #000d;
 }
 
-.link-list-li .tagline{
+.link-list-li.git .tagline{
   margin: 0.25rem;
+}
+
+.header.git {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  /* color:#bcf; */
 }
 
 .projects li:hover{
@@ -79,7 +85,7 @@
   }
 }
 
-.link-list-links{
+.link-list-links.git{
   margin-top: auto;
   display:flex;
   flex-direction:row;

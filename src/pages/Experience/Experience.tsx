@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import CV from "../../assets/CV.pdf";
+import CV from "../../assets/docs/CV.pdf";
 import "./experience.css";
 //import Container from "../../components/Container/Container";
 
@@ -7,7 +7,7 @@ export const Experience = () => {
 
   useEffect(() => {
     document.title = "Experience | Elliot Buckingham";
-  });
+  }, []);
 
   return(
     <div className="content">

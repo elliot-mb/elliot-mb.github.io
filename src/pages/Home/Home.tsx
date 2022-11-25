@@ -1,16 +1,18 @@
 import React, { useEffect } from 'react';
 import "./home.css";
 import { IconButton } from '../../components/Button/Button';
-import GithubIcon from "../../assets/github.svg";
-import EmailIcon from "../../assets/email.svg";
-import LinkedInIcon from "../../assets/linkedin.svg";
 import { Intro } from "../../components/Intro/Intro";
+
+import GithubIcon from "../../assets/img/github.svg";
+import EmailIcon from "../../assets/img/email.svg";
+import LinkedInIcon from "../../assets/img/linkedin.svg";
+
 
 export const Home = () => {
 
   useEffect(() => {
     document.title = "Home | Elliot Buckingham";
-  });
+  }, []);
 
   return(
     <div className="content">
@@ -23,7 +25,7 @@ export const Home = () => {
         </div>
 
         <div className="home-content"> 
-          <h1>Hello! I'm Elliot</h1>
+          <h1><span className="blue-text">Hello!</span> I'm Elliot</h1>
           {Intro}
 
           <h3>Contact me</h3>

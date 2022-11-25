@@ -4,10 +4,16 @@ import {
   Link
 } from "react-router-dom";
 import "./link.css"; 
-import GithubIcon from "../../assets/github.svg";
-import LinkIcon from "../../assets/link.svg";
+import GithubIcon from "../../assets/img/github.svg";
+import LinkIcon from "../../assets/img/link.svg";
+
+import {projectNameToPath} from "../../helpers/strings";
+
+import {setPOJO} from "../../App";
 
 type Link = {
+  className: string
+  setPageInfo: setPOJO,
   root: string,
   lis: any[]
 }
@@ -16,24 +22,29 @@ type Paragraph = {
   xs: string[]
 }
 
-export function LinkList ({root, lis}: Link) {
+export function LinkList ({className, setPageInfo, root, lis}: Link) {
   let elements: JSX.Element[] = [];
   lis.forEach((li, i) => {
     elements.push(
-      <li className="link-list-li" key={i}>
+      <li className={`link-list-li ${className}`} key={i}>
         <div>
-          <h3>{li.name}</h3>
-          <div className="project-image" >
-            <p className="image-text">{li.status}</p>
-            <img src={li.thumb} alt={li.name}/>
-          </div>
+          <h2 className={`header ${className}`}>{li.name}</h2>
+
+          { li.thumb !== undefined 
+          ? <div className="project-image" >
+              <p className="image-text">{li.status}</p>
+              <img src={li.thumb} alt={li.name}/>
+            </div> 
+          : <></> 
+          }
+
           {
-            li.tagline !== undefined ? <p className="tagline">{li.tagline}</p> :
+            li.tagline !== undefined ? <p className={`tagline ${className}`}>{li.tagline}</p> :
             <></>
           }
         </div>
-        <div className="link-list-links" >
-          <LinkButton to={`${root}/${li.name}`} alt={`Learn more about ${li.name}`} text="Learn more"/>
+        <div className={`link-list-links ${className}`} >
+          <LinkButton onClick={() => { setPageInfo(li); } } to={`${root}/${projectNameToPath(li.name)}`} alt={`Learn more about ${li.name}`} text="Learn more"/>
           {
             li.url !== undefined && li.url !== "" ? <IconButton 
             icon={
@@ -47,7 +58,7 @@ export function LinkList ({root, lis}: Link) {
     );
   });
   return(
-    <ul>
+    <ul className={`root ${className}`}>
       {elements}
     </ul>
   );

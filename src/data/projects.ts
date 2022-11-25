@@ -106,22 +106,22 @@ export const gitProjects: Project[] = [
 ];
 
 export const otherProjects: Project[] = [
-  {
-    name:"BEEES Robot Wars",
-    thumb: images.nul,
-    status: "Ongoing",
-    url:"",
-    tagline:"",
-    content: []
-  },
-  {
-    name:"Digital art",
-    thumb: images.nul,
-    status: "Ongoing",
-    url:"",
-    tagline:"",
-    content: []
-  },
+  // { these can be blog pages
+  //   name:"BEEES Robot Wars",
+  //   thumb: images.nul,
+  //   status: "Ongoing",
+  //   url:"",
+  //   tagline:"",
+  //   content: []
+  // },
+  // {
+  //   name:"Digital art",
+  //   thumb: images.nul,
+  //   status: "Ongoing",
+  //   url:"",
+  //   tagline:"",
+  //   content: []
+  // },
   {
     name:"Bluetooth speaker",
     thumb: images.nul,

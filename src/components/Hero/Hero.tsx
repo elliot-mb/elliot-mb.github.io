@@ -24,7 +24,7 @@ export const Hero = () => {
     return(
         <div id="hero">
             <h1 className="hero h1">
-            <Link id="elliot-mb" to="/">ElliotMB</Link>
+            <Link id="elliot-mb" to="/">Elliot<span className="blue-text">MB</span></Link>
             </h1>
             <nav>
             <ul className="nav-bar">
