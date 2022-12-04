@@ -1,9 +1,12 @@
 .inline{
-    display: grid;
-}
-
-.inline-project-page-title{
     display: flex;
     flex-direction: row;
+}
+
+.inline.project-page-title{
+    gap: 1rem;
+}
+
+.inline.blog-header{
     gap: 1rem;
 }

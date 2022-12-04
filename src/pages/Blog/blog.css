@@ -26,3 +26,14 @@
     list-style-type: none;
     padding: 0rem;
 }
+
+.blog-list.inline{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 2rem;
+}
+
+.viewcount{
+    margin-top: 0.25rem;
+    text-align: right;
+}

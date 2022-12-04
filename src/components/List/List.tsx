@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { LinkButton, IconButton } from "../Button/Button";
 import {
   Link
@@ -7,7 +7,10 @@ import "./link.css";
 import GithubIcon from "../../assets/img/github.svg";
 import LinkIcon from "../../assets/img/link.svg";
 
+import {BlogPageData} from "../../data/blog_pages";
+
 import {projectNameToPath} from "../../helpers/strings";
+import {getCounts} from "../../helpers/requests";
 
 import {setPOJO} from "../../App";
 
@@ -60,6 +63,50 @@ export function LinkList ({className, setPageInfo, root, lis}: Link) {
   return(
     <ul className={`root ${className}`}>
       {elements}
+    </ul>
+  );
+}
+
+export const BlogList = (props: {className: string, root: string, lis: BlogPageData[]}) => {
+
+  const [viewcounts, setViewcounts] = useState<(number)[]>(Array(props.lis.length).fill(0));
+  //const [begunLoading, setBegunLoading] = useState<boolean>(false);
+
+  //setViewcounts([0, 0]);
+
+  useEffect(() => {
+    let names: string[] = props.lis.map((x) => projectNameToPath(x.name))
+    getCounts(names)
+    .then(counts => setViewcounts(counts.map(x => x['count'])))
+    .catch((err: Error) => {
+      console.error(err);
+      setViewcounts([-1]);
+    })
+  }, [])
+
+  return(
+    <ul className={`root ${props.className}`}>
+      {props.lis.map((li, i) => {
+        let date: string = li.date.reduce((x, y) => `${x}/${y < 10 ? `0${y}` : y}`, "").slice(1);
+
+        // let viewcount: Promise<number> = getCount<{count: number}>(projectNameToPath(li.name))
+        // .then(({count}) => count)
+        // .catch(err => { console.error(err); return -1; })
+
+        return(
+          <li className={`link-list-li ${props.className}`} key={i}>
+            <div className={`blog-list inline`}>
+              <h2 className={`header ${props.className}`}>{li.name}</h2>
+              <span className={"viewcount blog-list"}>{viewcounts[i]} views</span>
+            </div>
+            <span>{date}</span>
+            <p className={`tagline ${props.className}`}>{li.tagline}</p>
+            <div className={`link-list-links ${props.className}`} >
+              <LinkButton onClick={() => {}} to={`${props.root}/${projectNameToPath(li.name)}`} alt={`Learn more about ${li.name}`} text="Learn more"/>
+            </div>
+          </li>
+        )
+      })}
     </ul>
   );
 }
