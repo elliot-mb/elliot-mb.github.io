@@ -102,7 +102,7 @@
     width:18rem;
   }
 
-  .link-list-links{
+  .link-list-links.git{
     flex-direction: column;
   }
 

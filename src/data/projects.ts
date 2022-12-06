@@ -13,7 +13,7 @@ export type Project = {
 
 export const gitProjects: Project[] = [
   {
-    name:"Scotland Yard OOP Coursework",
+    name:"Scotland Yard Coursework",
     thumb:images.scy,
     status: "Complete",
     url:"https://github.com/jade-bejide/ScotlandYard",
