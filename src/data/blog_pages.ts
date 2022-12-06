@@ -10,8 +10,8 @@ export type BlogPageData = {
 
 export const pages: BlogPageData[] = [
     {
-        name: "Markdown-driven blog",
-        date: [12, 10, 22],
+        name: "A Markdown-driven blog",
+        date: [12, 11, 22],
         thumb: undefined,
         tagline: "Introducing a Markdown-driven blogging page to my website.",
         content: require("../assets/md/markdown_blog.md") ///oh my god require!
