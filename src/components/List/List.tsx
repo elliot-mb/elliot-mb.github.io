@@ -67,9 +67,13 @@ export function LinkList ({className, setPageInfo, root, lis}: Link) {
   );
 }
 
+const filledArray = (value: number, len: number): number[] => {
+  return Array(len).fill(value);
+}
+
 export const BlogList = (props: {className: string, root: string, lis: BlogPageData[]}) => {
 
-  const [viewcounts, setViewcounts] = useState<(number)[]>(Array(props.lis.length).fill(0));
+  const [viewcounts, setViewcounts] = useState<(number)[]>(filledArray(0, props.lis.length));
   //const [begunLoading, setBegunLoading] = useState<boolean>(false);
 
   //setViewcounts([0, 0]);
@@ -80,7 +84,7 @@ export const BlogList = (props: {className: string, root: string, lis: BlogPageD
     .then(counts => setViewcounts(counts.map(x => x['count'])))
     .catch((err: Error) => {
       console.error(err);
-      setViewcounts([-1]);
+      setViewcounts(filledArray(-1, props.lis.length));
     })
   }, [])
 

@@ -2,8 +2,9 @@ export const git: { [key: string]: string } = {
     endpoint: "https://raw.githubusercontent.com"
 }
 
+export const pi = "http://pi.elliotmb.dev:8030/";
+
 export const view_count = {
-    base:"http://pichat.ddns.net:8030/",
-    set: "http://pichat.ddns.net:8030/api/view_count/set",
-    get: "http://pichat.ddns.net:8030/api/view_count/get?field="
+    set: pi + "api/view_count/set",
+    get: pi + "api/view_count/get?field="
 }

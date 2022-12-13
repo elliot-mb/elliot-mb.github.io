@@ -15,5 +15,12 @@ export const pages: BlogPageData[] = [
         thumb: undefined,
         tagline: "Introducing a Markdown-driven blogging page to my website.",
         content: require("../assets/md/markdown_blog.md") ///oh my god require!
+    },
+    {
+        name: "Whats the issue with a view counter?",
+        date: [13, 12, 22],
+        thumb: undefined,
+        tagline: "One little Raspberry Pi model 1 rev B versus the world...",
+        content: require("../assets/md/viewcount.md")
     }
 ].reverse();
