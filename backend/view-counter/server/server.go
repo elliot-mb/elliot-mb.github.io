@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"sync"
+	"time"
 )
 
 type Store struct {
@@ -127,17 +128,70 @@ func NewStore(path string) *Store {
 	return &s
 }
 
+func makeServer(store *Store) *http.Server {
+
+	http.HandleFunc("/api/view_count/get", store.getCount)
+	http.HandleFunc("/api/view_count/set", store.setCount)
+
+	return &http.Server{
+		ReadTimeout:  5 * time.Second,
+		WriteTimeout: 5 * time.Second,
+		IdleTimeout:  120 * time.Second,
+	}
+}
+
 func main() {
-	portPtr := flag.String("port", "8030", "port to listen on")
+	port := flag.String("port", "8030", "port to listen on")
+	isProduction := flag.Bool("production", false, "whether/not app is being started in production")
 	flag.Parse()
 
-	s := NewStore("./server/persist/counts.json")
-	defer s.Persist.Close()
+	store := NewStore("./server/persist/counts.json")
+	defer store.Persist.Close()
 
-	http.HandleFunc("/api/view_count/get", s.getCount)
+	//var m *autocert.Manager
+	//var httpsServer *http.Server
 
-	http.HandleFunc("/api/view_count/set", s.setCount)
+	if *isProduction {
+		//hostPolicy := func(ctx context.Context, host string) error {
+		//	allowedHost := "pi.elliotmb.dev"
+		//	if host == allowedHost {
+		//		return nil
+		//	}
+		//	return fmt.Errorf("acme/autocert: only %s host is allowed", allowedHost)
+		//}
+		//
+		//certDir := "./cert_cache"
+		//m = &autocert.Manager{
+		//	Prompt:     autocert.AcceptTOS,
+		//	HostPolicy: hostPolicy,
+		//	Cache:      autocert.DirCache(certDir),
+		//}
+		//
+		//httpsServer = makeServer(s)
+		//httpsServer.Addr = ":443"
+		//httpsServer.TLSConfig = &tls.Config{GetCertificate: m.GetCertificate}
+		//
+		//go func() {
+		//	fmt.Printf("Starting HTTPS server on port %s\n", httpsServer.Addr)
+		//	err := httpsServer.ListenAndServeTLS("", "")
+		//	if err != nil {
+		//		fmt.Printf("httpsServer.ListenAndServeTLS failed, error: %s\n", err)
+		//	}
+		//}()
 
-	fmt.Println("Listening @ port " + *portPtr)
-	log.Fatal(http.ListenAndServe(":"+*portPtr, nil))
+		http.HandleFunc("/api/view_count/get", store.getCount)
+		http.HandleFunc("/api/view_count/set", store.setCount)
+		go func() {
+			err := http.ListenAndServeTLS(":443", "/etc/letsencrypt/live/pi.elliotmb.dev/fullchain.pem", "/etc/letsencrypt/live/pi.elliotmb.dev/privkey.pem", nil)
+			if err != nil {
+				fmt.Println("Error http.ListenAndServeTLS: ", err)
+			}
+		}()
+	}
+
+	//http.HandleFunc("/api/view_count/get", s.getCount)
+	//http.HandleFunc("/api/view_count/set", s.setCount)
+
+	fmt.Println("Starting HTTP server on port " + *port)
+	log.Fatal(http.ListenAndServe(":"+*port, nil))
 }
