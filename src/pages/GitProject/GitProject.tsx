@@ -21,12 +21,13 @@ export const GitProject = (props: { pageInfo: Project }) => {
 
   //state 
   const [readmeShown, setShown] = useState(false);
+  
+  const { projectClass } = useParams();
 
   useEffect(() => { //cant be called after the return as react hooks are tempermental
     document.title = `${projectClass} | Elliot Buckingham`;
-  }, []);
+  }, [projectClass]);
 
-  const { projectClass } = useParams();
 
   let projectID = -1;
 

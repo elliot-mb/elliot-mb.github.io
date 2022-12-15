@@ -29,12 +29,12 @@ export const BlogPage = (props: { pageInfo: BlogPageData}) => {
             console.error(err)
             //already logged
         })
-    }, []);
+    }, [blogClass]);
 
     let pageID = -1;
 
     if(!pages.reduce((x, y) => { 
-        console.log(`${ blogClass}  ${projectNameToPath(y.name)}`)
+        //console.log(`${ blogClass}  ${projectNameToPath(y.name)}`)
         if(!x) { pageID++; } 
         return (x || (projectNameToPath(y.name)) === blogClass);
     }, false)){

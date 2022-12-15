@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { LinkButton, IconButton } from "../Button/Button";
-import {
-  Link
-} from "react-router-dom";
 import "./link.css"; 
 import GithubIcon from "../../assets/img/github.svg";
 import LinkIcon from "../../assets/img/link.svg";
@@ -14,7 +11,7 @@ import {getCounts} from "../../helpers/requests";
 
 import {setPOJO} from "../../App";
 
-type Link = {
+type LinkType = {
   className: string
   setPageInfo: setPOJO,
   root: string,
@@ -27,7 +24,7 @@ type Paragraph = {
 
 const STATES: [string, string, string] = ["fetching", "fetched", "error"];
 
-export function LinkList ({className, setPageInfo, root, lis}: Link) {
+export function LinkList ({className, setPageInfo, root, lis}: LinkType) {
   let elements: JSX.Element[] = [];
   lis.forEach((li, i) => {
     elements.push(
@@ -93,7 +90,7 @@ export const BlogList = (props: {className: string, root: string, lis: BlogPageD
       setViewcounts(filledArray(-1, props.lis.length));
       setState(STATES[2]);
     })
-  }, [])
+  }, [props.lis])
 
   return(
     <ul className={`root ${props.className}`}>
@@ -132,10 +129,10 @@ export function ParagraphList ({xs} : Paragraph) {
   let elements: JSX.Element[] = [];
   xs.forEach((x, i) => {
     let blocks: JSX.Element[] = [];
-    {x.split("<br>").forEach((block: string, j: number) => {
+    x.split("<br>").forEach((block: string, j: number) => {
         blocks.push(<span key={j}>{block}</span>); 
         blocks.push(<br key={j + blocks.length + 1}/>); //adds newlines, avoids key collisions 
-    })}
+    })
     elements.push(<p key={i}>
       {blocks}
     </p>);
