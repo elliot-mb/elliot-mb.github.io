@@ -2,7 +2,7 @@ export const git: { [key: string]: string } = {
     endpoint: "https://raw.githubusercontent.com"
 }
 
-export const pi = "http://pi.elliotmb.dev:8030/";
+export const pi = "https://pi.elliotmb.dev/"; //finally got certbot working :)
 
 export const view_count = {
     set: pi + "api/view_count/set",
