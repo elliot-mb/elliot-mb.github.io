@@ -25,6 +25,8 @@ type Paragraph = {
   xs: string[]
 }
 
+const STATES: [string, string, string] = ["fetching", "fetched", "error"];
+
 export function LinkList ({className, setPageInfo, root, lis}: Link) {
   let elements: JSX.Element[] = [];
   lis.forEach((li, i) => {
@@ -73,6 +75,7 @@ const filledArray = (value: number, len: number): number[] => {
 
 export const BlogList = (props: {className: string, root: string, lis: BlogPageData[]}) => {
 
+  const [state, setState] = useState<string>(STATES[0]); 
   const [viewcounts, setViewcounts] = useState<(number)[]>(filledArray(0, props.lis.length));
   //const [begunLoading, setBegunLoading] = useState<boolean>(false);
 
@@ -81,10 +84,14 @@ export const BlogList = (props: {className: string, root: string, lis: BlogPageD
   useEffect(() => {
     let names: string[] = props.lis.map((x) => projectNameToPath(x.name))
     getCounts(names)
-    .then(counts => setViewcounts(counts.map(x => x['count'])))
+    .then(counts => { 
+      setViewcounts(counts.map(x => x['count']))
+      setState(STATES[1]);
+    })
     .catch((err: Error) => {
       console.error(err);
       setViewcounts(filledArray(-1, props.lis.length));
+      setState(STATES[2]);
     })
   }, [])
 
@@ -101,7 +108,13 @@ export const BlogList = (props: {className: string, root: string, lis: BlogPageD
           <li className={`link-list-li ${props.className}`} key={i}>
             <div className={`blog-list inline`}>
               <h2 className={`header ${props.className}`}>{li.name}</h2>
-              <span className={"viewcount blog-list"}>{viewcounts[i]} views</span>
+              <span className={"viewcount blog-list"}>{
+                state === STATES[0] 
+                ? STATES[0] 
+                : state === STATES[2] 
+                ? STATES[2]
+                : viewcounts[i]
+              } views</span>
             </div>
             <span>{date}</span>
             <p className={`tagline ${props.className}`}>{li.tagline}</p>
