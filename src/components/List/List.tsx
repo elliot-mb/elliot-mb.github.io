@@ -112,7 +112,7 @@ export const BlogList = (props: {className: string, root: string, lis: BlogPageD
                 state === STATES[0] 
                 ? STATES[0] 
                 : state === STATES[2] 
-                ? STATES[2]
+                ? "couldn't fetch"
                 : viewcounts[i]
               } views</span>
             </div>
