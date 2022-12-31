@@ -27,7 +27,7 @@ export const gitProjects: Project[] = [
     url:null,
     tagline:"Developing and creating an AI for the Scotland Yard boardgame.",
     content:["My programming partner and I implemented, in Java, the mechanics of an undirected graph-based board game. Furthermore, we produced an 'exemplary' AI which was 'agonisingly close to near-unbeatable' (quote from marker).<br>It was able to statically evaluate projected states-of-play inside an alpha-beta pruning Minimax tree.<br>Static evaluation contained shortest path computation and standard-deviation distances evaluation.",
-    "Design patterns in project include Visitor, Model-View-Controller, Abstract/Factory and Observer.<br>We utilised test-driven development with JUnit to create assertion-based test cases."]
+    "Design patterns used in the project include Visitor, Model-View-Controller, Abstract/Factory and Observer.<br>We utilised test-driven development with JUnit to create assertion-based test cases."]
   },
   {
     name:"Portfolio website",
