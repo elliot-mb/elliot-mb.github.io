@@ -48,12 +48,16 @@ export function LinkList ({className, setPageInfo, root, lis}: LinkType) {
         <div className={`link-list-links ${className}`} >
           <LinkButton onClick={() => { setPageInfo(li); } } to={`${root}/${projectNameToPath(li.name)}`} alt={`Learn more about ${li.name}`} text="Learn more"/>
           {
-            li.url !== undefined && li.url !== "" ? <IconButton 
-            icon={
-              new URL(li.url).hostname === "github.com" ?
-              GithubIcon : LinkIcon
-            } 
-            url={li.url} target={"_blank"} alt={`page of ${li.name}`} text={`${new URL(li.url).hostname === "github.com" ? "GitHub " : "Web" }page`}/> : <></>
+            li.url !== null 
+            ? <IconButton 
+              icon={
+                new URL(li.url).hostname === "github.com" ?
+                GithubIcon : LinkIcon
+              } 
+              url={li.url} target={"_blank"} alt={`page of ${li.name}`} text={`${new URL(li.url).hostname === "github.com" 
+                ? "GitHub " 
+                : "Web" }page`}/> 
+            : <></>
           }
         </div>
       </li>

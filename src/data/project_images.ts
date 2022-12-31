@@ -10,6 +10,7 @@ import Polynomial from "../assets/img/poly.png";
 import Portfolio from "../assets/img/portfolio.png";
 import PlaylistConverter from "../assets/img/playlist_conv.png"
 import Visualiser from "../assets/img/visualiser.png"
+import TreeVis from "../assets/img/treevis.png";
 
 // image alias map 
 export const images : { [key: string]: string } = {
@@ -24,5 +25,6 @@ export const images : { [key: string]: string } = {
     rtc: Raytracing,
     ply: Polynomial,
     ptf: Portfolio,
-    vis: Visualiser
+    vis: Visualiser,
+    tvs: TreeVis
 };
