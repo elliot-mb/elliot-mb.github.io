@@ -50,9 +50,16 @@ export const GitProject = (props: { pageInfo: Project }) => {
           <h3>{project.tagline}</h3>
           <ParagraphList xs={project.content}/>
         </div>
-        <div className={`shown-${readmeShown}`} id="markdown-box">
-          <button id="readme" onClick={() => setShown(!readmeShown)}>README.md</button>
-          <GitResource url={project.url} display={readmeShown}/>
+        <div>
+          <img className="git-project-inner-image" src={project.thumb} alt={project.name}/>
+          {
+            project.url === null 
+            ? <></>
+            : <div className={`shown-${readmeShown}`} id="markdown-box">
+                <button id="readme" onClick={() => setShown(!readmeShown)}>README.md</button>
+                <GitResource url={project.url} display={readmeShown}/>
+              </div>
+          }
         </div>
       </div>
     </div> 

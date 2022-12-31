@@ -6,22 +6,30 @@ export type Project = {
   name: string,
   thumb: string,
   status: Status,
-  url: string,
+  url: string | null,
   tagline: string,
   content: string[]
 };
 
 export const gitProjects: Project[] = [
   {
+    name:"2-3-4 Tree Visualiser",
+    thumb: images.tvs,
+    status: "Work in progress",
+    url: "https://github.com/elliot-mb/tree-vis",
+    tagline: "Perform real-time modifications to a browser-based B-tree of order 4.",
+    content: ["On the lead up to my exams I wanted to implement this datastructure, in order to better undstand it."]
+  },
+  {
     name:"Scotland Yard Coursework",
     thumb:images.scy,
     status: "Complete",
-    url:"https://github.com/jade-bejide/ScotlandYard",
+    url:null,
     tagline:"Developing and creating an AI for the Scotland Yard boardgame.",
-    content:[]
+    content:["Implemented mechanics in Java of an undirected graph-based board game and an 'exemplary' AI; 'agonisingly close to near-unbeatable' (quote from marker).","States of play statically evaluated inside an alpha-beta pruning Minimax algorithm for the AI. - Static evaluation contained shortest path computation and standard-deviation distances evaluation.<br>Design patterns in project include Visitor, Model-View-Controller, Abstract/Factory and Observer.<br>Utilised test-driven development with JUnit, creating assertion-based test cases."]
   },
   {
-    name:"Portfolio Website",
+    name:"Portfolio website",
     thumb:images.ptf,
     status: "Work in progress",
     url:"https://github.com/elliot-mb/elliot-mb.github.io",
@@ -126,7 +134,7 @@ export const otherProjects: Project[] = [
     name:"Bluetooth speaker",
     thumb: images.nul,
     status: "Complete",
-    url:"",
+    url: null,
     tagline:"DIY 60w Bluetooth amplifier.",
     content: []
   }
