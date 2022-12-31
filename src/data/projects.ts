@@ -26,7 +26,8 @@ export const gitProjects: Project[] = [
     status: "Complete",
     url:null,
     tagline:"Developing and creating an AI for the Scotland Yard boardgame.",
-    content:["Implemented mechanics in Java of an undirected graph-based board game and an 'exemplary' AI; 'agonisingly close to near-unbeatable' (quote from marker).","States of play statically evaluated inside an alpha-beta pruning Minimax algorithm for the AI. - Static evaluation contained shortest path computation and standard-deviation distances evaluation.<br>Design patterns in project include Visitor, Model-View-Controller, Abstract/Factory and Observer.<br>Utilised test-driven development with JUnit, creating assertion-based test cases."]
+    content:["My programming partner and I implemented, in Java, the mechanics of an undirected graph-based board game. Furthermore, we produced an 'exemplary' AI which was 'agonisingly close to near-unbeatable' (quote from marker).<br>It was able to statically evaluate projected states-of-play inside an alpha-beta pruning Minimax tree.<br>Static evaluation contained shortest path computation and standard-deviation distances evaluation.",
+    "Design patterns in project include Visitor, Model-View-Controller, Abstract/Factory and Observer.<br>We utilised test-driven development with JUnit to create assertion-based test cases."]
   },
   {
     name:"Portfolio website",
