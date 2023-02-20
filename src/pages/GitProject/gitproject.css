@@ -51,7 +51,7 @@ code{
   padding-bottom: 0.5em;
 }
 
-img{
+.git-project-inner-image{
   max-width: min(calc(950px), calc((100vw - 7rem)));
 }
 
@@ -67,7 +67,7 @@ img{
     grid-template-columns: 1fr 1fr;
     gap: 2em;
   }
-  img{
+  .git-project-inner-image{
     max-width: min(calc(536px), calc((100vw - 12rem) / 2));
   }
   #markdown-box{

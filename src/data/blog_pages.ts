@@ -3,8 +3,8 @@
 export type BlogPageData = {
     name: string,
     date: number[], 
-    thumb: string, //data uri
-    tagline: string,
+    thumb: string, //discord-hosted image url
+    tagline: string, 
     content: Request //filepath to a markdown file
 }
 
@@ -12,15 +12,22 @@ export const pages: BlogPageData[] = [
     {
         name: "A Markdown-driven blog",
         date: [12, 11, 22],
-        thumb: undefined,
+        thumb: "https://cdn.discordapp.com/attachments/1077003372600774686/1077003485435928686/Screenshot_from_2023-02-19_22-34-59.png",
         tagline: "Introducing a Markdown-driven blogging page to my website.",
         content: require("../assets/md/markdown_blog.md") ///oh my god require!
     },
     {
         name: "Whats the issue with a view counter?",
         date: [13, 12, 22],
-        thumb: undefined,
-        tagline: "One little Raspberry Pi model 1 rev B versus the world...",
+        thumb: "https://cdn.discordapp.com/attachments/1077003372600774686/1077004385059606558/Screenshot_from_2023-02-19_23-10-41.png",
+        tagline: "Hosting a view-counting server on my Raspberry pi",
         content: require("../assets/md/viewcount.md")
+    },
+    {
+        name: "Bristol Computer Science Society ArtHack",
+        date: [18, 2, 23],
+        thumb: "https://cdn.discordapp.com/attachments/1077003372600774686/1077006893161127996/Screenshot_from_2023-02-19_23-20-41.png",
+        tagline: "Words on desiging, building and testing my Mechanical Marble Adder-Subtractor for a brand-new society event!",
+        content: require("../assets/md/arthack.md")
     }
-].reverse();
+].reverse(); //order added newest to oldest

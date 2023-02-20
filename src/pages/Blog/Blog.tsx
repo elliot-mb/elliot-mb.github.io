@@ -23,7 +23,7 @@ export const Blog = (props: { setPageInfo: setPOJO }) => {
             <p>This is the obligatory blog page! I'm planning to post any and every project I deem interesting enough, computer science or otherwise.
             <br/>The nice thing is that posts don't have to be GitHub worthy, and it also allows me to talk about my extracurricular activities outside programming, mulling over the details and rambling to my heart's content.
             </p>
-            <BlogList className="blog" root={"/blog"} lis={pages}/>
+            <BlogList className="blog" root={"/blog"} lis={pages}/> 
         </div>
     </>)
 }

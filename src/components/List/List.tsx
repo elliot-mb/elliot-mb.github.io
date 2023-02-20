@@ -117,10 +117,18 @@ export const BlogList = (props: {className: string, root: string, lis: BlogPageD
                 : viewcounts[i]
               } views</span>
             </div>
-            <span>{date}</span>
-            <p className={`tagline ${props.className}`}>{li.tagline}</p>
-            <div className={`link-list-links ${props.className}`} >
-              <LinkButton onClick={() => {}} to={`${props.root}/${projectNameToPath(li.name)}`} alt={`Learn more about ${li.name}`} text="Learn more"/>
+            <span className="blog-list-date">{date}</span>
+            <p></p>
+            <div className="tagline-grid">
+              <div className="blog-img-box">
+                <img className={`img ${props.className}`} src={li.thumb} alt=""/>
+              </div>
+              <div>
+                <p className={`tagline ${props.className}`}>{li.tagline}</p>
+                <div className={`link-list-links ${props.className}`} >
+                  <LinkButton onClick={() => {}} to={`${props.root}/${projectNameToPath(li.name)}`} alt={`Learn more about ${li.name}`} text="Learn more"/>
+                </div>
+              </div>
             </div>
           </li>
         )
