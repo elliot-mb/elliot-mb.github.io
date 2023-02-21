@@ -1,4 +1,5 @@
 import {view_count} from '../data/api_endpoints';
+import {getIdentifier} from '../data/local_storage';
 
 export const incrementCount = <T>(field: string): Promise<T> => {
 
@@ -12,7 +13,8 @@ export const incrementCount = <T>(field: string): Promise<T> => {
         },
         body: JSON.stringify({
             "field":field,
-            "delta":1
+            "delta":1,
+            "setter":getIdentifier()
         })
     }
 
