@@ -1,6 +1,0 @@
-#!/bin/bash
-
-go build -o=out server/server.go
-sudo setcap 'cap_net_bind_service=+ep' /home/pi/documents/mirrored-documents/go/view-counter/out
-sudo ./out -port=80 -production=true 2>/dev/null
-
