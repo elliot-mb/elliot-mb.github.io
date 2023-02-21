@@ -9,8 +9,8 @@ import { projectNameToPath } from '../../helpers/strings';
 import { incrementCount } from '../../helpers/requests';
 
 import "./blogpage.css";
-import { Inline } from '../../components/Inline/Inline';
 import { LinkButton } from '../../components/Button/Button';
+import rehypeRaw from 'rehype-raw';
 
 export const BlogPage = (props: { pageInfo: BlogPageData}) => {
 
@@ -49,11 +49,16 @@ export const BlogPage = (props: { pageInfo: BlogPageData}) => {
 
     //a back button and some markdown
     return(<>
-        <div className="content">
-            <Inline 
-            className="blog-header" 
-            children={[<h1 key={1}>{page.name}</h1>, <LinkButton key={2} onClick={() => {}} id="back-button" to="/blog" text="< Back" alt="Back button"/>]}/>
-            <ReactMarkdown className="markdown-html">{content}</ReactMarkdown>
+        <div className="blog-page-banner">
+            <img className="blog-page-img" src={page.thumb} alt=""/>
+        </div>
+        
+        <div className="content blog-page">
+            <div className="blog-header">
+                <h1 key={1}>{page.name}</h1>
+            </div>
+            <LinkButton key={2} onClick={() => {}} id="back-button" to="/blog" text="< Back" alt="Back button"/>
+            <ReactMarkdown className="markdown-html" rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
         </div>
     </>)
 }

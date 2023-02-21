@@ -6,3 +6,28 @@
     background-color: rgb(82, 82, 82);
     border-radius: 0.25rem;
 }
+
+.blog-page-banner{
+    display: absolute;
+    margin-left: calc(50vw - 40rem);
+    overflow: hidden;
+}
+
+.blog-page-img{
+    display: fixed;
+    width: 80rem;
+    height: 30rem;
+    object-fit: cover;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    
+}
+
+.content.blog-page{
+    margin-top: -12rem;
+    
+}
+
+.blog-header{
+    font-size: 2rem;
+}
