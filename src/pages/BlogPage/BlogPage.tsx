@@ -10,6 +10,7 @@ import { incrementCount } from '../../helpers/requests';
 
 import "./blogpage.css";
 import { LinkButton } from '../../components/Button/Button';
+import rehypeRaw from 'rehype-raw';
 
 export const BlogPage = (props: { pageInfo: BlogPageData}) => {
 
@@ -57,7 +58,7 @@ export const BlogPage = (props: { pageInfo: BlogPageData}) => {
                 <h1 key={1}>{page.name}</h1>
             </div>
             <LinkButton key={2} onClick={() => {}} id="back-button" to="/blog" text="< Back" alt="Back button"/>
-            <ReactMarkdown className="markdown-html">{content}</ReactMarkdown>
+            <ReactMarkdown className="markdown-html" rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
         </div>
     </>)
 }

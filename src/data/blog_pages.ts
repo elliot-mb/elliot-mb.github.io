@@ -24,9 +24,9 @@ export const pages: BlogPageData[] = [
         content: require("../assets/md/viewcount.md")
     },
     {
-        name: "Bristol Computer Science Society ArtHack",
+        name: "My mechanical binary adding machine",
         date: [18, 2, 23],
-        thumb: "https://cdn.discordapp.com/attachments/1077003372600774686/1077006893161127996/Screenshot_from_2023-02-19_23-20-41.png",
+        thumb: "https://cdn.discordapp.com/attachments/1077003372600774686/1077574597412663326/image.png",
         tagline: "Words on desiging, building and testing my Mechanical Marble Adder-Subtractor for a brand-new society event!",
         content: require("../assets/md/arthack.md")
     }
