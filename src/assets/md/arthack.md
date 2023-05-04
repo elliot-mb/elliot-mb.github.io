@@ -9,7 +9,7 @@ I however just decided to build what I wanted and tack the theme on later. Could
 
 As you may be aware from the title, I produced some sort of binary adder? What is that exactly? 
 
-Conceptually a binary adder is fairly self-explanator; that which is able to add two binary numbers together and output the result. 
+Conceptually a binary adder is fairly self-explanatory; that which is able to add two binary numbers together and output the result. 
 
 Making this mechanically sounded challenging, so I decided to see if anyone had done anything similar before. I found an extremely elegant design on [YouTube](https://youtu.be/GcDshWmhF4A) made from plywood and nails.
 Since I prefer to have a machine do as much work for me as possible, I created mine in a way that used lasercutting and 3D-printing as much as possible. 
