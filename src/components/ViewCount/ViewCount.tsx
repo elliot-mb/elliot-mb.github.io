@@ -8,9 +8,9 @@ export const ViewCount = (props: { id: string }) => {
     const [state, setState] = useState<remoteResource>('loading');
 
     useEffect(() => {
-        getCount<number>(props.id).then(
-            (count) => {
-                setViews(count);
+        getCount<{count: number}>(props.id).then(
+            (record) => {
+                setViews(record.count);
                 setState('loaded');
             }
         ).catch(
@@ -25,7 +25,7 @@ export const ViewCount = (props: { id: string }) => {
         {state === 'error'
         ? 'failed to fetch'
         : state === 'loaded'
-        ? views
+        ? `${views} ${views === 1 ? 'view' : 'views'}`
         : 'loading'}
         </span>
     );

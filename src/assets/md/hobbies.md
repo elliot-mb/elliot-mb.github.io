@@ -6,5 +6,14 @@ I got my first digital drawing device [(Wacom Bamboo CTL-490)](https://www.amazo
 
 # Music
 
+I've tried a couple different aspects of music; namely playing and composition. I used to play guitar, and after practising for grade 5 I stopped around year 9. \
+Since then I've been composing _chiptunes_, a genre of music with the strict limitation of using sounds that emulate the capaibilities of old musical/console hardware, such as the sound-chip on the (S)NES. 
+
 ## Chiptunes
 
+A handful of recent songs I've released (view on YouTube): 
+- [Lighter than lithium](https://www.youtube.com/watch?v=s8sF23J2-6U&pp=ygUVbGlnaHRlciB0aGFuIGxpdGhpdW0g)
+- [Reschedule that](https://www.youtube.com/watch?v=Kv6M3IHQRZo)
+- [Love letters in morse code](https://www.youtube.com/watch?v=dpQy5s1AUO4)
+
+If you like any of the above, please consider subscribing as I plan to release more soon :)
