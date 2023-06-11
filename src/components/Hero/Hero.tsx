@@ -8,8 +8,8 @@ export const Hero = () => {
     const links: JSX.Element[] = [
     <Link to="/">Home</Link>,
     <Link to="/projects">Projects</Link>,
-    <Link to="/experience">Experience</Link>,
-    <Link to="/blog">Blog</Link>
+    <Link to="/blog">Blog</Link>,
+    <Link to="/experience">Experience</Link>
     ];
 
     const keys: number[] = [1, 2, 3, 4]

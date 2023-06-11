@@ -31,19 +31,18 @@ export const incrementCount = <T>(field: string): Promise<T> => {
     });
 }
 
-export const getCount = <T>(field: string): Promise<T> => {
+export const getCount = async <T>(field: string): Promise<T> => {
     
-    return fetch(`${view_count.get}${field}`)
-    .then((response) => {
-        if(!response.ok){ 
-            throw new Error(response.statusText) //caught in catch
+    try {
+        const response = await fetch(`${view_count.get}${field}`);
+        if (!response.ok) {
+            throw new Error(response.statusText); //caught in catch
         }
-        return response.json()
-    })
-    .catch((err: Error) => {
+        return await response.json();
+    } catch (err) {
         console.error(err);
         throw err;
-    });
+    }
     
 }
 

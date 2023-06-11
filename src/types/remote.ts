@@ -1,0 +1,1 @@
+export type remoteResource = 'loading' | 'loaded' | 'error';

@@ -18,6 +18,7 @@ export const Projects = (props: {setPageInfo: setPOJO}) => {
   return(
     <div className="content">
       <h1>Projects</h1>
+      <h2>About this page</h2>
       <p>Mostly extracurricular projects, though these do include some projects related to my Computer Science BSc.<br/>
       There are also projects I've completed or begun outside of computer science posted on this page.
       </p>

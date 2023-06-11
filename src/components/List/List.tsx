@@ -126,7 +126,7 @@ export const BlogList = (props: {className: string, root: string, lis: BlogPageD
               <div>
                 <p className={`tagline ${props.className}`}>{li.tagline}</p>
                 <div className={`link-list-links ${props.className}`} >
-                  <LinkButton onClick={() => {}} to={`${props.root}/${projectNameToPath(li.name)}`} alt={`Learn more about ${li.name}`} text="Learn more"/>
+                  <LinkButton className='bloglink' onClick={() => {}} to={`${props.root}/${projectNameToPath(li.name)}`} alt={`Learn more about ${li.name}`} text="Learn more"/>
                 </div>
               </div>
             </div>
