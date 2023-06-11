@@ -18,7 +18,6 @@
 }
 
 .tagline.blog{
-    color:#bcf;
     margin-top: 0rem;
 }
 
@@ -31,7 +30,6 @@
 /*make images square*/
 img.blog{
     width: 15rem;
-    height: 15rem;
     border-radius: 0.5rem;
 }
 

@@ -13,6 +13,18 @@ export type Project = {
 
 export const gitProjects: Project[] = [
   {
+    name:'Game of Life Coursework',
+    thumb: 'https://pi.elliotmb.dev/static/image/elliotmb_dev/gopher.png',
+    status: 'Complete',
+    url: null, //private,
+    tagline: "Multi-threaded and Remote Procedure Call game of life in golang",
+    content: ["This was the main coursework my partner Jade and I undertook for the first term of my second year. We were tasked with completing this coursework in three main stages:",
+    " - A local concurrent/multithreaded/multiprocess/highly parallelised implementation of Conway's Game of Life <br> - An implementation which separated the interface from the parallel logic, across the network (using AWS) <br> - An implementation which paralellised the workload between multiple worker nodes, coordinated by a network broker",
+    "This was my favourite coursework of the first two years of my studies, because it tested our algorithmic thinking and debugging; there is a lot to consider when debugging concurrent code. Additionally I enjoyed writing robust synchronisation strategies to coordinate such parallel processing. Furthermore my partner and I worked hard for this coursework, and came out with a high first-class as a result.",
+    "The coursework contained a report, including things such as:",
+    "- Performance metrics, explanations, and analysis across varying worker counts, cpu threads, function paradigms (memory sharing versus channel communcation) <br> - Explanations of our unique implementation of 'halo exchange' for networked parallelism"]
+  },
+  {
     name:"2-3-4 Tree Visualiser",
     thumb: images.tvs,
     status: "Work in progress",
