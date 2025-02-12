@@ -9,7 +9,7 @@ import {BlogPageData} from "../../data/blog_pages";
 import {projectNameToPath} from "../../helpers/strings";
 
 import {setPOJO} from "../../App";
-import { ViewCount } from "../ViewCount/ViewCount";
+
 
 type LinkType = {
   className: string
