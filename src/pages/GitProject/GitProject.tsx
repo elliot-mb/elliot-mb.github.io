@@ -20,7 +20,7 @@ import {projectNameToPath} from "../../helpers/strings"
 export const GitProject = (props: { pageInfo: Project }) => {
 
   //state 
-  const [readmeShown, setShown] = useState(false);
+  const [readmeShown, setShown] = useState(true);
   
   const { projectClass } = useParams();
 
@@ -50,17 +50,21 @@ export const GitProject = (props: { pageInfo: Project }) => {
           <h3>{project.tagline}</h3>
           <ParagraphList xs={project.content}/>
         </div>
-        <div>
+        <div className="git-image">
+          <></>
           <img className="git-project-inner-image" src={project.thumb} alt={project.name}/>
-          {
+          <></>
+        </div>
+        {
             project.url === null 
             ? <></>
             : <div className={`shown-${readmeShown}`} id="markdown-box">
-                <button id="readme" onClick={() => setShown(!readmeShown)}>README.md</button>
+                <button id="readme" onClick={() => setShown(!readmeShown)}>
+                  README.md {readmeShown ? "(click to close)" : ""}
+                </button>
                 <GitResource url={project.url} display={readmeShown}/>
               </div>
-          }
-        </div>
+        }
       </div>
     </div> 
   )

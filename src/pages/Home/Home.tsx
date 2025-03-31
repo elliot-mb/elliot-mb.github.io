@@ -21,8 +21,8 @@ export const Home = () => {
           <div id="header">
             <img id="selfie" src="https://avatars.githubusercontent.com/u/45922387?v=4" alt="profile picture"/>
             <h2 id="tagline">Elliot Buckingham</h2>
-            <h3 id="tagline">Univeristy of Bristol Computer Science student</h3>
-            <h3 id="tagline">Graduating Summer 2024</h3>
+            <h3 id="tagline">Software Engineering Graduate</h3>
+            <h3 id="tagline">1st Class BSc Computer Science</h3>
           </div>
         </div>
 

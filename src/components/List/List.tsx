@@ -9,7 +9,6 @@ import {BlogPageData} from "../../data/blog_pages";
 import {projectNameToPath} from "../../helpers/strings";
 
 import {setPOJO} from "../../App";
-import { ViewCount } from "../ViewCount/ViewCount";
 
 type LinkType = {
   className: string
@@ -80,7 +79,7 @@ export const BlogList = (props: {className: string, root: string, lis: BlogPageD
             <div className={`blog-list inline`}>
               <h2 className={`header ${props.className}`}>{li.name}</h2>
               <span className={"viewcount blog-list"}>
-                <ViewCount id={projectNameToPath(li.name)} />
+                Views Disabled
               </span>
             </div>
             <span className="blog-list-date">{date}</span>

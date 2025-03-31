@@ -14,7 +14,7 @@ export type Project = {
 export const gitProjects: Project[] = [
   {
     name:'Game of Life Coursework',
-    thumb: 'https://pi.elliotmb.dev/static/image/elliotmb_dev/gopher.png',
+    thumb: images.gol,
     status: 'Complete',
     url: null, //private,
     tagline: "Multi-threaded and Remote Procedure Call game of life in golang",
