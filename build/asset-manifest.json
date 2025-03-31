@@ -1,21 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.51ba2966.css",
-    "main.js": "/static/js/main.087d771e.js",
+    "main.css": "/static/css/main.a902e9cf.css",
+    "main.js": "/static/js/main.58b831fd.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/tracer.gif": "/static/media/tracer.63f607c3319562295dc6.gif",
     "static/media/scotland.png": "/static/media/scotland.e9a7b83db78d7978f428.png",
+    "static/media/pi.png": "/static/media/pi.20d1c776ec48d08e00e2.png",
+    "static/media/marble.png": "/static/media/marble.386c76651bc7efad1057.png",
+    "static/media/catboy.png": "/static/media/catboy.d89107b42f0d6cae541e.png",
     "static/media/playlist.png": "/static/media/playlist.7f13fcce90fc805ecf30.png",
     "static/media/visualiser.png": "/static/media/visualiser.01c6482809350a47ad97.png",
     "static/media/poly.png": "/static/media/poly.35b7043154b21a1a84ff.png",
     "static/media/euler.png": "/static/media/euler.dcfa483f4e603a46f2c0.png",
+    "static/media/ableton.png": "/static/media/ableton.b041122b6ba8231706bd.png",
     "static/media/rpn.jpg": "/static/media/rpn.5889dee897f0b1f2ad4c.jpg",
     "static/media/matrix.png": "/static/media/matrix.5ff2eb244920d635f739.png",
     "static/media/treevis.png": "/static/media/treevis.a3dd2c823324db0e37d0.png",
     "static/media/playlist_conv.png": "/static/media/playlist_conv.1442af9717cb421963c3.png",
+    "static/media/md_blog.png": "/static/media/md_blog.75911a349c7709bc2dba.png",
     "static/media/github.svg": "/static/media/github.7c13c82b1a3e605207aa7cd652b6e4b3.svg",
     "static/media/arthack.md": "/static/media/arthack.893fc8a4a499aedcfac1.md",
-    "static/media/getting_to_grips_with_ableton_live.md": "/static/media/getting_to_grips_with_ableton_live.cf510c55d5bee120466a.md",
+    "static/media/ableton.md": "/static/media/ableton.cf510c55d5bee120466a.md",
     "static/media/viewcount.md": "/static/media/viewcount.707ed9d6209270f217e4.md",
     "static/media/linkedin.svg": "/static/media/linkedin.c6b860b809f83087c800ae63ccc93c6d.svg",
     "static/media/hobbies.md": "/static/media/hobbies.47895e68282b1d92949c.md",
@@ -23,12 +28,12 @@
     "static/media/link.svg": "/static/media/link.0d84a6c97f817df2b778a38b883674b5.svg",
     "static/media/markdown_blog.md": "/static/media/markdown_blog.3fdfbfc18279292a1c23.md",
     "index.html": "/index.html",
-    "main.51ba2966.css.map": "/static/css/main.51ba2966.css.map",
-    "main.087d771e.js.map": "/static/js/main.087d771e.js.map",
+    "main.a902e9cf.css.map": "/static/css/main.a902e9cf.css.map",
+    "main.58b831fd.js.map": "/static/js/main.58b831fd.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51ba2966.css",
-    "static/js/main.087d771e.js"
+    "static/css/main.a902e9cf.css",
+    "static/js/main.58b831fd.js"
   ]
 }

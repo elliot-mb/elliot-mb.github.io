@@ -25,3 +25,6 @@ yarn-error.log*
 
 # letsencrypt
 cert_cache
+
+build/asset-manifest.json
+build/index.html
