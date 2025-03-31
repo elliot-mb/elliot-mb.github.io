@@ -34,8 +34,13 @@
 
 .git-project-inner-image {
   padding: 1rem 0 1rem 0;
-  width: 30rem;
-  
+  max-width: 30rem;
+  height:fit-content;
+}
+
+div.git-image{
+  display: flex;
+  justify-content: center;
 }
 
 code{
@@ -51,10 +56,6 @@ code{
   padding-bottom: 0.5em;
 }
 
-.git-project-inner-image{
-  max-width: min(calc(950px), calc((100vw - 7rem)));
-}
-
 #git-project .link-button{
   margin: 0 0;
   font-size: 1rem;
@@ -67,10 +68,8 @@ code{
     grid-template-columns: 1fr 1fr;
     gap: 2em;
   }
-  .git-project-inner-image{
-    max-width: min(calc(536px), calc((100vw - 12rem) / 2));
-  }
+
   #markdown-box{
-    max-width: min(calc(536px), calc((100vw - 12rem) / 2));
+    grid-column: 1 / 3;
   }
 }

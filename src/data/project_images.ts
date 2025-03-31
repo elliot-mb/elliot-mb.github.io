@@ -11,6 +11,7 @@ import Portfolio from "../assets/img/portfolio.png";
 import PlaylistConverter from "../assets/img/playlist_conv.png"
 import Visualiser from "../assets/img/visualiser.png"
 import TreeVis from "../assets/img/treevis.png";
+import GoL from "../assets/img/gol.png";
 
 // image alias map 
 export const images : { [key: string]: string } = {
@@ -26,5 +27,6 @@ export const images : { [key: string]: string } = {
     ply: Polynomial,
     ptf: Portfolio,
     vis: Visualiser,
-    tvs: TreeVis
+    tvs: TreeVis,
+    gol: GoL
 };

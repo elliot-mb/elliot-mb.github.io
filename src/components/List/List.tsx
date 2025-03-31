@@ -10,7 +10,6 @@ import {projectNameToPath} from "../../helpers/strings";
 
 import {setPOJO} from "../../App";
 
-
 type LinkType = {
   className: string
   setPageInfo: setPOJO,
@@ -79,9 +78,9 @@ export const BlogList = (props: {className: string, root: string, lis: BlogPageD
           <li className={`link-list-li ${props.className}`} key={i}>
             <div className={`blog-list inline`}>
               <h2 className={`header ${props.className}`}>{li.name}</h2>
-              {/* <span className={"viewcount blog-list"}>
-                <ViewCount id={projectNameToPath(li.name)} />
-              </span> */}
+              <span className={"viewcount blog-list"}>
+                Views Disabled
+              </span>
             </div>
             <span className="blog-list-date">{date}</span>
             <p></p>
