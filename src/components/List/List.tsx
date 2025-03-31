@@ -9,10 +9,6 @@ import {BlogPageData} from "../../data/blog_pages";
 import {projectNameToPath} from "../../helpers/strings";
 
 import {setPOJO} from "../../App";
-<<<<<<< HEAD
-=======
-
->>>>>>> dev-rollback
 
 type LinkType = {
   className: string
