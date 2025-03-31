@@ -16,7 +16,7 @@ Since I prefer to have a machine do as much work for me as possible, I created m
 
 All of this manufacturing was made possible by my faculty's free-to-use facilities (you don't even pay for the filament!)
 
-<img src="https://cdn.discordapp.com/attachments/1077003372600774686/1077577261215121478/image.png" alt="picture" style="width: calc(min(30rem, 80vw);"/>
+<img src="https://cdn.discordapp.com/attachments/1077003372600774686/1077577018251689984/IMG20230218095134.jpg?ex=67ad458d&is=67abf40d&hm=029254b6e4363d412ef276624cb0e970368989d8c8434847f79053ae6903d431&" alt="picture" style="width: calc(min(30rem, 80vw);"/>
 
 Pictured above are the parts I started the event with, which were designed and manufactured by me during the week. 
 
@@ -33,7 +33,7 @@ This machine uses marbles to present data; a register position populated with a 
 - OUT(PUT): (the register) where marbles are collected once an addition is finished. The value can be read off in Two’s Complement from the inscriptions below the register.
 - DISCARD: where any marbles that MEMORY discards during addition end up.
 
-<img src="https://cdn.discordapp.com/attachments/1077003372600774686/1077574597412663326/image.png" alt="picture" style="width: calc(min(30rem, 80vw);"/>
+<img src="https://cdn.discordapp.com/attachments/1077003372600774686/1077574597412663326/image.png?ex=67ad434c&is=67abf1cc&hm=66a4ce3ea20d55dde96a76f087072cef71116b8b9ed8e9b92d971c46986aaa90&" alt="picture" style="width: calc(min(30rem, 80vw);"/>
 
 ## Instructions for use
 
